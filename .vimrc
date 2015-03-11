@@ -24,7 +24,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 syntax on
-colorscheme molokai
+colorscheme elflord
 " }}} Setup
 " Options {{{
 set autoindent                          " auto indenting is on
