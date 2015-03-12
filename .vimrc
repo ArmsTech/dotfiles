@@ -32,6 +32,7 @@ set colorcolumn=79                      " show line to enforce 80 char lines
 set complete+=k
 set copyindent                          " copy previous auto indent
 set dictionary=/usr/share/dict/words    " default dictionary
+set encoding=utf-8                      " set file encoding
 set expandtab                           " use spaces when <tab> is pressed
 set foldmethod=marker                   " enable folding
 set hidden                              " hide (not close) buffers
@@ -40,7 +41,7 @@ set hlsearch                            " highlight found search terms
 set ignorecase                          " ignore case when searching
 set incsearch                           " show matches while typing
 set list                                " show special characters
-set listchars=tab:▸\ ,eol:¬             " Tab and EOL to TextMate chars
+set listchars=tab:▸\ ,eol:¬             " tab and EOL to TextMate chars
 set nobackup                            " do not save backup files
 set noerrorbells                        " no beeping
 set noswapfile                          " do not create swap files
