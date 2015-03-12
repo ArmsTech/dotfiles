@@ -40,6 +40,7 @@ set history=1000                        " remember more history
 set hlsearch                            " highlight found search terms
 set ignorecase                          " ignore case when searching
 set incsearch                           " show matches while typing
+set lazyredraw                          " only redraw when required
 set list                                " show special characters
 set listchars=tab:▸\ ,eol:¬             " tab and EOL to TextMate chars
 set nobackup                            " do not save backup files
@@ -58,6 +59,7 @@ set smarttab                            " tabs are only used for indentation
 set softtabstop=4                       " simulate tabstop width != tabstop
 set tabstop=4                           " a <tab> is equvalent to x spaces
 set title                               " change the terminal title
+set ttyfast                             " scroll fast in terminal
 set undolevels=1000                     " increase undo history
 set visualbell                          " no flashing
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
