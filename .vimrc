@@ -99,8 +99,9 @@ nnoremap k n
 nnoremap j e
 nnoremap h s
 
-" previous search term is K (k is next)
-nnoremap <s-k> N
+" go to beginning and end of line with *strong* motion keys
+noremap N ^
+noremap E g_
 
 " toggle folding with space
 " http://vim.wikia.com/wiki/Folding
