@@ -68,12 +68,15 @@ hi Search cterm=NONE ctermfg=black ctermbg=yellow
 " Leaders {{{
 let mapleader=","
 
-nmap <leader>/ :nohlsearch<CR>
-inoremap <leader>i <Esc>
-nmap <leader>s :set spell!<CR>
-nmap <leader>v :edit $MYVIMRC<CR>
-nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+nnoremap <leader>/ :nohlsearch<CR>
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>q :q!<cr>
+nnoremap <leader>s :set spell!<CR>
+nnoremap <leader>v :edit $MYVIMRC<CR>
+nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+nnoremap <leader>z :wq!<cr>
+
+inoremap <leader>i <Esc>
 " }}} Leaders
 " Remap Keys {{{
 " remap ; to : for entering command mode
