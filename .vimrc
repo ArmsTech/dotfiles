@@ -49,6 +49,7 @@ set noswapfile                          " do not create swap files
 set nowrap                              " do not wrap lines
 set number                              " show line numbers
 set pastetoggle=<F2>                    " toggle :set paste on
+set relativenumber                      " set number hybrid mode
 set shiftround                          " indent by mulitible of shiftwidth
 set shiftwidth=4                        " size of the indent is x spaces
 set showcmd                             " show info about the current command
