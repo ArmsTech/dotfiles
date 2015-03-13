@@ -72,7 +72,7 @@ nmap <leader>/ :nohlsearch<CR>
 inoremap <leader>i <Esc>
 nmap <leader>s :set spell!<CR>
 nmap <leader>v :edit $MYVIMRC<CR>
-nnoremap <leader>stw :call <SID>StripTrailingWhitespaces()<CR>
+nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " }}} Leaders
 " Remap Keys {{{
@@ -125,16 +125,4 @@ if has("autocmd")
 endif
 " }}} Auto Commands
 " Functions {{{
-" http://vimcasts.org/episodes/tidying-whitespace
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
 " }}} Functions
