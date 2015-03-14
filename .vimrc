@@ -112,6 +112,9 @@ vnoremap <Space> za
 
 " save a file that requires root privelages AFTER opening
 cmap w!! w !sudo tee % >/dev/null
+
+" use <tab> to match parenthesis, brackets, etc...
+noremap <tab> %
 " }}} Remap Keys
 " Plugins {{{
 let g:ycm_key_list_select_completion=['<Up>', '<Down>']
