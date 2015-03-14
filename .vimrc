@@ -31,6 +31,7 @@ set autoindent                          " auto indenting is on
 set colorcolumn=79                      " show line to enforce 80 char lines
 set complete+=k
 set copyindent                          " copy previous auto indent
+set cursorline                          " show a cursor line
 set dictionary=/usr/share/dict/words    " default dictionary
 set encoding=utf-8                      " set file encoding
 set expandtab                           " use spaces when <tab> is pressed
@@ -64,6 +65,7 @@ set ttyfast                             " scroll fast in terminal
 set undolevels=1000                     " increase undo history
 set visualbell                          " no flashing
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
+hi CursorLine term=bold cterm=bold
 " }}} Options
 " Leaders {{{
 let mapleader=","
