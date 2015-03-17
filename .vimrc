@@ -20,14 +20,13 @@ call vundle#end()
 filetype plugin indent on
 
 if has("gui_running")
-   set guioptions-=T
-   set guioptions-=r
-   set guioptions-=R
-   set guioptions-=m
-   set guioptions-=l
-   set guioptions-=L
-   set guitablabel=%t
-   set lines=999 columns=999
+   set guioptions-=T                    " remove toolbar
+   set guioptions-=m                    " remove menubar
+   set guioptions-=r                    " remove right-scrollbar
+   set guioptions-=l                    " remove left-scrollbar
+   set guioptions-=R                    " remove right-scrollbar for v-splits
+   set guioptions-=L                    " remove left-scrollbar for v-splits
+   set lines=999 columns=999            " full screen in gui-mode
 endif
 
 if $COLORTERM == 'gnome-terminal'
