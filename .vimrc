@@ -19,6 +19,17 @@ Plugin 'ervandew/supertab'
 call vundle#end()
 filetype plugin indent on
 
+if has("gui_running")
+   set guioptions-=T
+   set guioptions-=r
+   set guioptions-=R
+   set guioptions-=m
+   set guioptions-=l
+   set guioptions-=L
+   set guitablabel=%t
+   set lines=999 columns=999
+endif
+
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
