@@ -82,6 +82,7 @@ hi CursorLine term=bold cterm=bold
 let mapleader=","
 
 nnoremap <leader>/ :nohlsearch<CR>
+nnoremap <leader>e e: %:h<cr>
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>s :set spell!<CR>
