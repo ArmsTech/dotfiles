@@ -82,7 +82,7 @@ hi CursorLine term=bold cterm=bold
 let mapleader=","
 
 nnoremap <leader>/ :nohlsearch<CR>
-nnoremap <leader>e e: %:h<cr>
+nnoremap <leader>e :e %:p:h<cr>
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>s :set spell!<CR>
@@ -143,7 +143,14 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 if has("autocmd")
   au BufNewFile,BufRead *.jinja2 setfiletype html
   au bufwritepost .vimrc source $MYVIMRC
+  au filetype netrw call Netrw_Maps_For_Colemak()
 endif
 " }}} Auto Commands
 " Functions {{{
+function! Netrw_Maps_For_Colemak()
+    noremap <buffer> n h
+    noremap <buffer> e l
+    noremap <buffer> s k
+    noremap <buffer> t j
+endfunction
 " }}} Functions
