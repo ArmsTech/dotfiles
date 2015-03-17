@@ -5,3 +5,6 @@ alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout'
 alias gf='git fetch'
+
+alias v='vim'
+alias g='gvim'
