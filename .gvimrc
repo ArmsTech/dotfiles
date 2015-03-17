@@ -1,0 +1,3 @@
+" Setup {{{
+colorscheme gentooish
+" }}} Setup
