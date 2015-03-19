@@ -99,8 +99,9 @@ xnoremap t j
 "
 " remap keys clobbered for colemak
 nnoremap k n
-nnoremap j e
+nnoremap l e
 nnoremap h s
+nnoremap j t
 
 " go to beginning and end of line with *strong* motion keys
 noremap N ^
