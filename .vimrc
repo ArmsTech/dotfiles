@@ -8,7 +8,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nvie/vim-flake8'
-Plugin 'kien/ctrlp.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/simple-pairs'
