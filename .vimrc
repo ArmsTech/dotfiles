@@ -12,7 +12,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/simple-pairs'
-Plugin 'vim-scripts/tComment'
 Plugin 'SirVer/ultisnips'
 Plugin 'ervandew/supertab'
 
