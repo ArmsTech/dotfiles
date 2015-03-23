@@ -68,16 +68,23 @@ hi CursorLine term=bold cterm=bold
 " Leaders {{{
 let mapleader=","
 
-nnoremap <leader>/ :nohlsearch<CR>
+nnoremap <leader>/ :nohlsearch<cr>
+nnoremap <leader><bar> <c-w>v
+nnoremap <leader>- <c-w>s
+nnoremap <leader>c <c-w>w
+nnoremap <leader>C <c-w>w<c-w>w
 nnoremap <leader>e :e %:p:h<cr>
-nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
+nnoremap <leader>m <c-w>_<c-w><bar>
+nnoremap <leader>mu <c-w>=
 nnoremap <leader>q :q!<cr>
-nnoremap <leader>s :set spell!<CR>
-nnoremap <leader>v :edit $MYVIMRC<CR>
+nnoremap <leader>s :set spell!<cr>
+nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+nnoremap <leader>x <c-w>x
 nnoremap <leader>z :wq!<cr>
 
-inoremap <leader>i <Esc>
+inoremap <leader>i <esc>
 " }}} Leaders
 " Remap Keys {{{
 " remap ; to : for entering command mode
@@ -107,8 +114,8 @@ noremap E g_
 
 " toggle folding with space
 " http://vim.wikia.com/wiki/Folding
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-vnoremap <Space> za
+nnoremap <silent> <space> @=(foldlevel('.')?'za':"\<space>")<cr>
+vnoremap <space> za
 
 " save a file that requires root privelages AFTER opening
 cmap w!! w !sudo tee % >/dev/null
@@ -117,7 +124,7 @@ cmap w!! w !sudo tee % >/dev/null
 noremap <tab> %
 " }}} Remap Keys
 " Plugins {{{
-let g:ycm_key_list_select_completion=['<Up>', '<Down>']
+let g:ycm_key_list_select_completion=['<up>', '<down>']
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
