@@ -69,7 +69,7 @@ hi CursorLine term=bold cterm=bold
 " Leaders {{{
 let mapleader=","
 
-nnoremap <leader>/ :nohlsearch<cr>
+nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader><bar> <c-w>v
 nnoremap <leader>- <c-w>s
 nnoremap <leader>c <c-w>w
