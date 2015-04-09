@@ -75,6 +75,7 @@ nnoremap <leader>c <c-w>w
 nnoremap <leader>C <c-w>w<c-w>w
 nnoremap <leader>e :e %:p:h<cr>
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
+nnoremap <leader>G :gui<cr>
 nnoremap <leader>m <c-w>_<c-w><bar>
 nnoremap <leader>mu <c-w>=
 nnoremap <leader>q :q!<cr>
