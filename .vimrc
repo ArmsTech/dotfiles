@@ -13,7 +13,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-scripts/simple-pairs'
 Plugin 'SirVer/ultisnips'
-Plugin 'ervandew/supertab'
 Plugin 'joequery/Stupid-EasyMotion'
 
 call vundle#end()
@@ -132,8 +131,6 @@ noremap <tab> %
 " }}} Remap Keys
 " Plugins {{{
 let g:ycm_key_list_select_completion=['<up>', '<down>']
-
-let g:SuperTabDefaultCompletionType = "<c-n>"
 
 let g:UltiSnipsSnippetDirectories=["ultisnips-snippets"]
 let g:ultisnips_python_style="sphinx"
