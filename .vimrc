@@ -14,6 +14,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'vim-scripts/simple-pairs'
 Plugin 'SirVer/ultisnips'
 Plugin 'ervandew/supertab'
+Plugin 'joequery/Stupid-EasyMotion'
 
 call vundle#end()
 filetype plugin indent on
@@ -69,6 +70,10 @@ hi CursorLine term=bold cterm=bold
 " Leaders {{{
 let mapleader=","
 
+map <leader>f <leader><leader>f
+map <leader>w <leader><leader>w
+map <leader>W <leader><leader>W
+
 nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader><bar> <c-w>v
 nnoremap <leader>- <c-w>s
@@ -80,9 +85,9 @@ nnoremap <leader>G :gui<cr>
 nnoremap <leader>m <c-w>_<c-w><bar>
 nnoremap <leader>mu <c-w>=
 nnoremap <leader>q :q!<cr>
+nnoremap <leader>rw mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap <leader>s :set spell!<cr>
 nnoremap <leader>v :edit $MYVIMRC<cr>
-nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap <leader>x <c-w>x
 nnoremap <leader>z :wq!<cr>
 
