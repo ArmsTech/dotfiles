@@ -29,6 +29,7 @@ colorscheme elflord
 set autoindent                          " auto indenting is on
 set colorcolumn=79                      " show line to enforce 80 char lines
 set complete+=k
+set completeopt-=preview                " do not show ycm preview window
 set copyindent                          " copy previous auto indent
 set cursorline                          " show a cursor line
 set dictionary=/usr/share/dict/words    " default dictionary
@@ -130,6 +131,10 @@ cmap w!! w !sudo tee % >/dev/null
 noremap <tab> %
 " }}} Remap Keys
 " Plugins {{{
+let g:ycm_autoclose_preview_window_after_completion=0
+let g:ycm_collect_identifiers_from_comments_and_strings=1
+let g:ycm_complete_in_comments=1
+let g:ycm_complete_in_strings=1
 let g:ycm_key_list_select_completion=['<up>', '<down>']
 
 let g:UltiSnipsSnippetDirectories=["ultisnips-snippets"]
