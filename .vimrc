@@ -15,6 +15,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'marijnh/tern_for_vim'
 
 call vundle#end()
 filetype plugin indent on
