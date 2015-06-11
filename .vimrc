@@ -11,9 +11,10 @@ Plugin 'nvie/vim-flake8'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'vim-scripts/simple-pairs'
 Plugin 'SirVer/ultisnips'
 Plugin 'joequery/Stupid-EasyMotion'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'jelera/vim-javascript-syntax'
 
 call vundle#end()
 filetype plugin indent on
