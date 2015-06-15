@@ -16,6 +16,7 @@ Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'Shutnik/jshint2.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -150,6 +151,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.jinja2 setfiletype html
   au bufwritepost .vimrc source $MYVIMRC
   au filetype netrw call Netrw_Maps_For_Colemak()
+  au filetype javascript nnoremap <buffer> <F7> :JSHint<CR>
 endif
 " }}} Auto Commands
 " Functions {{{
