@@ -5,6 +5,10 @@ priority -50
 # snippet fun     "javascript function"
 # snippet varf    "javascript function in variable"
 # snippet for     "javascript for loop"
+# snippet if      "javascript if statement"
+# snippet ifm     "javascript if statement multi-line"
+# snippet ife     "javascript if-else statement"
+# snippet ifi     "javascript if-else-if statement"
 # snippet con     "javascript console"
 # snippet cona    "javascript console assert"
 
@@ -34,6 +38,33 @@ snippet for "for (...) {...}" b
 for (var ${1:i} = ${2:0}; $1 ${3:<} ${4:length}; $1${5:++}) {
 	${VISUAL}$0
 }
+endsnippet
+
+snippet if "if statement" b
+if (${1:variable} ${2:===} ${3:"${4:string}"})
+	${VISUAL}$0
+endsnippet
+
+snippet ifb "if statement (with braces)" b
+if (${1:variable} ${2:===} ${3:"${4:string}"})
+	${VISUAL}$0
+}
+endsnippet
+
+snippet ife "if-else statement" b
+if (${1:variable} ${2:===} ${3:"${4:string}"})
+	${VISUAL}$5
+else
+	${VISUAL}$0
+endsnippet
+
+snippet ifi "if-else-if statement" b
+if (${1:variable} ${2:===} ${3:"${4:string}"})
+	${VISUAL}$5
+else if (${6:variable} ${7:===} ${8:"${9:string}"})
+	${VISUAL}$10
+else
+	${VISUAL}$0
 endsnippet
 
 snippet con "console" b
