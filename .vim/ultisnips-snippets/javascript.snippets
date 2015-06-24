@@ -2,8 +2,11 @@ priority -50
 
 # snippet #!      "node shebang"
 # snippet var     "javascript variable"
-# snippet fun     "javascript function"
 # snippet varf    "javascript function in variable"
+# snippet varo    "javascript object in variable"
+# snippet :       "javascript object attribute"
+# snippet :f      "javascript object method"
+# snippet fun     "javascript function"
 # snippet for     "javascript for loop"
 # snippet if      "javascript if statement"
 # snippet ifm     "javascript if statement multi-line"
@@ -22,16 +25,32 @@ var ${1:name} = ${2:value};
 $0
 endsnippet
 
+snippet varf "function assigned to var"
+var ${1:name} = function ${2:name}(${3:argument}) {
+	${VISUAL}$0
+};
+endsnippet
+
+snippet varo "object assigned to var"
+var ${1:name} = {
+	${VISUAL}$0
+};
+endsnippet
+
+snippet : "object attribute"
+${1:key}: ${2:"${3:value}"},$0
+endsnippet
+
+snippet :f "object method"
+${1:method}: function(${2:attribute}) {
+	${VISUAL}$0
+}${3:,}
+endsnippet
+
 snippet fun "function" b
 function ${1:name}(${2:argument}) {
 	${VISUAL}$0
 }
-endsnippet
-
-snippet varf "function assigned to var"
-${1:var }${2:name} = function $2(${3}) {
-	${VISUAL}$0
-};
 endsnippet
 
 snippet for "for (...) {...}" b
@@ -73,26 +92,6 @@ endsnippet
 
 snippet cona "console assert" b
 console.assert(${1:assertion}, ${2:"${3:message}"});
-endsnippet
-
-snippet '':f "object method string"
-'${1:${2:#thing}:${3:click}}': function(element) {
-	${VISUAL}$0
-}${10:,}
-endsnippet
-
-snippet :f "Object Method"
-${1:method_name}: function(${3:attribute}) {
-	${VISUAL}$0
-}${10:,}
-endsnippet
-
-snippet :, "Object Value JS"
-${1:value_name}: ${0:value},
-endsnippet
-
-snippet : "Object key key: 'value'"
-${1:key}: ${2:"${3:value}"}${4:, }
 endsnippet
 
 snippet proto "Prototype (proto)"
