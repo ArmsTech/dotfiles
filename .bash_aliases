@@ -1,10 +1,13 @@
-alias gs='git status'
+alias c='xclip -selection clipboard &>/dev/null'
+alias g='gvim'
+alias p='xclip -o -selection clipboard'
+alias s='tmux save-buffer - |c'
+alias v='vim'
+
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
 alias gd='git diff'
-alias go='git checkout'
 alias gf='git fetch'
-
-alias v='vim'
-alias g='gvim'
+alias go='git checkout'
+alias gs='git status'
