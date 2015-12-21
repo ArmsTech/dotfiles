@@ -31,11 +31,9 @@ colorscheme elflord
 " Options {{{
 set autoindent                          " auto indenting is on
 set colorcolumn=79                      " show line to enforce 80 char lines
-set complete+=k
 set completeopt-=preview                " do not show ycm preview window
 set copyindent                          " copy previous auto indent
 set cursorline                          " show a cursor line
-set dictionary=/usr/share/dict/words    " default dictionary
 set encoding=utf-8                      " set file encoding
 set expandtab                           " use spaces when <tab> is pressed
 set foldmethod=marker                   " enable folding
@@ -63,7 +61,6 @@ set smartcase                           " ignore case when lowercase
 set smarttab                            " tabs are only used for indentation
 set softtabstop=4                       " simulate tabstop width != tabstop
 set tabstop=4                           " a <tab> is equvalent to x spaces
-set title                               " change the terminal title
 set ttyfast                             " scroll fast in terminal
 set undolevels=1000                     " increase undo history
 set visualbell                          " no flashing
