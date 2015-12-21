@@ -21,10 +21,6 @@ Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 filetype plugin indent on
 
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-
 syntax on
 colorscheme elflord
 " }}} Setup
