@@ -1,4 +1,5 @@
 " Setup {{{
+
 set nocompatible
 filetype off
 
@@ -23,8 +24,10 @@ filetype plugin indent on
 
 syntax on
 colorscheme elflord
+
 " }}} Setup
 " Options {{{
+
 set autoindent                          " auto indenting is on
 set colorcolumn=79                      " show line to enforce 80 char lines
 set completeopt-=preview                " do not show ycm preview window
@@ -62,8 +65,10 @@ set undolevels=1000                     " increase undo history
 set visualbell                          " no flashing
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 hi CursorLine term=bold cterm=bold
+
 " }}} Options
 " Leaders {{{
+
 let mapleader=","
 
 map <leader>f <leader><leader>f
@@ -88,8 +93,10 @@ nnoremap <leader>x <c-w>x
 nnoremap <leader>z :wq!<cr>
 
 inoremap <leader>i <esc>
+
 " }}} Leaders
 " Remap Keys {{{
+
 " remap ; to : for entering command mode
 nnoremap ; :
 
@@ -125,8 +132,10 @@ cmap w!! w !sudo tee % >/dev/null
 
 " use <tab> to match parenthesis, brackets, etc...
 noremap <tab> %
+
 " }}} Remap Keys
 " Plugins {{{
+
 let g:ycm_autoclose_preview_window_after_completion=0
 let g:ycm_collect_identifiers_from_comments_and_strings=1
 let g:ycm_complete_in_comments=1
@@ -138,20 +147,25 @@ let g:ultisnips_python_style="sphinx"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 " }}} Plugins
 " Auto Commands {{{
+
 if has("autocmd")
   au BufNewFile,BufRead *.jinja2 setfiletype html
   au bufwritepost .vimrc source $MYVIMRC
   au filetype netrw call Netrw_Maps_For_Colemak()
   au filetype javascript nnoremap <buffer> <F7> :JSHint<CR>
 endif
+
 " }}} Auto Commands
 " Functions {{{
+
 function! Netrw_Maps_For_Colemak()
     noremap <buffer> n h
     noremap <buffer> e l
     noremap <buffer> s k
     noremap <buffer> t j
 endfunction
+
 " }}} Functions
