@@ -1,0 +1,20 @@
+" movement keys
+unmap h
+unmap j
+unmap k
+unmap l
+
+unmap n
+map n scrollLeft
+unmap e
+map e scrollRight
+unmap s
+map s scrollUp
+unmap t
+map t scrollDown
+
+" tab movement keys
+unmap K
+unmap J
+map N previousTab
+map E nextTab
