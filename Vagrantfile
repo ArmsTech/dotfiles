@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :virtualbox do |vbox|
     vbox.cpus = "1"
     vbox.memory = "1024"
-    vbox.name = "Gentoo"
+    vbox.name = "Gentoo 64-bit"
   end
 
   config.ssh.username = "brenj"
