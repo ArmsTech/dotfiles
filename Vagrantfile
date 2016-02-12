@@ -8,6 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "cmiles/gentoo-amd64-minimal"
   config.vm.hostname = "gentoo.box"
   config.vm.provision "shell", path: "bootstrap.sh"
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.synced_folder "~/Workspace", "/home/vagrant/Workspace"
 
   config.vm.provider :virtualbox do |vbox|
     vbox.cpus = "1"
