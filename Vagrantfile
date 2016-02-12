@@ -1,9 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set filetype=ruby :
 
-VAGRANT_API_VERSION = "2"
+VAGRANTFILE_API_VERSION = "2"
 
-Vagrant.configure(VAGRANT_API_VERSION) do |config|
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "cmiles/gentoo-amd64-minimal"
   config.vm.hostname = "gentoo.box"
