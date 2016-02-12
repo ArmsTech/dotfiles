@@ -17,8 +17,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vbox.name = "Gentoo 64-bit"
   end
 
-  config.ssh.username = "brenj"
-  config.ssh.private_key_path = "~/.ssh/id_rsa"
-  config.ssh.forward_agent = true
-
 end
