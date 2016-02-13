@@ -1,3 +1,4 @@
 app-misc/tmux
 app-portage/gentoolkit
 dev-vcs/git
+net-misc/curl
