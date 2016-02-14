@@ -18,7 +18,7 @@ echo "[+] Installing packages"
 wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/packages
 while read -r package; do
   echo "Emerging package $package"
-  sudo emerge $package &>/dev/null
+  sudo emerge "$(package)" &>/dev/null
 done <"${PACKAGES_FILE}"
 
 echo "[+] Cloning repositories"
