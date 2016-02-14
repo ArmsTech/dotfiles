@@ -9,7 +9,7 @@ sudo rm -rf /etc/portage/package.use
 echo "[+] Setting Gentoo configuration files"
 wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/package.use
 sudo mv package.use /etc/portage/package.use
-chmod 644 /etc/portage/package.use
+sudo chmod 644 /etc/portage/package.use
 
 echo "[+] Updating the portage tree"
 sudo emerge-webrsync
@@ -38,6 +38,7 @@ ln -s dotfiles/.xmonad .xmonad
 wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-prompt.sh
 
 echo "[+] Configuring vim"
+mkdir ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
