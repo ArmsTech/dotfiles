@@ -34,5 +34,8 @@ ln -s dotfiles/.vim .vim
 ln -s dotfiles/.vimrc .vimrc
 ln -s dotfiles/.xmonad .xmonad
 
+# Get script for git prompt
+wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-prompt.sh
+
 echo "[+] Cleaning up"
 rm packages
