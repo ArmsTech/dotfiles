@@ -1,3 +1,5 @@
+# ~/.bashrc
+
 if [[ $- != *i* ]] ; then
   # Shell is non-interactive. Exit.
   return
