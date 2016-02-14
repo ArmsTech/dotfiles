@@ -1,3 +1,8 @@
+if [[ $- != *i* ]] ; then
+  # Shell is non-interactive. Exit.
+  return
+fi
+
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+  . ~/.bash_aliases
 fi
