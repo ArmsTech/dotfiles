@@ -45,7 +45,10 @@ nvm install node && nvm current >.nvmrc
 echo "[+] Configuring vim"
 mkdir ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+vim +PluginInstall +qall &>/dev/null
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer --tern-completer &>/dev/null
+cd
 
 echo "[+] Cleaning up"
 rm packages
