@@ -7,7 +7,7 @@ RAW_URL="https://raw.githubusercontent.com"
 sudo rm -rf /etc/portage/package.use
 
 echo "[+] Setting Gentoo configuration files"
-wget "${RAW_URL}"/package.use &>/dev/null
+wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/package.use
 sudo mv package.use /etc/portage/package.use
 chmod 644 /etc/portage/package.use
 
@@ -15,7 +15,7 @@ echo "[+] Updating the portage tree"
 sudo emerge-webrsync
 
 echo "[+] Installing packages"
-wget "${RAW_URL}"/packages &>/dev/null
+wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/packages
 while read -r package; do
   echo "Emerging package $package"
   sudo emerge $package &>/dev/null
