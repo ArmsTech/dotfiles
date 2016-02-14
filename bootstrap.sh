@@ -37,6 +37,11 @@ ln -s dotfiles/.xmonad .xmonad
 # Get script for git prompt
 wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-prompt.sh
 
+echo "[+] Installing node"
+wget -q -O - ${RAW_URL}/creationix/nvm/v0.30.2/install.sh |bash
+. ~/.bashrc
+nvm install node && nvm current >.nvmrc
+
 echo "[+] Configuring vim"
 mkdir ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
