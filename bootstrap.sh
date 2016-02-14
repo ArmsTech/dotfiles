@@ -17,11 +17,11 @@ sudo emerge-webrsync
 echo "[+] Installing packages"
 wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/packages
 while read -r package; do
-  echo "Emerging package $package"
-  sudo emerge "$(package)" &>/dev/null
+  echo "Emerging package ${package}"
+  sudo emerge "${package}" &>/dev/null
 done <"${PACKAGES_FILE}"
 
-echo "[+] Cloning repositories"
+echo "[+] Cloning dotfiles"
 git clone https://github.com/brenj/dotfiles.git
 
 echo "[+] Linking configuration files"
@@ -36,6 +36,10 @@ ln -s dotfiles/.xmonad .xmonad
 
 # Get script for git prompt
 wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-prompt.sh
+
+echo "[+] Configuring vim"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 echo "[+] Cleaning up"
 rm packages
