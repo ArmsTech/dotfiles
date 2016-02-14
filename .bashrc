@@ -14,3 +14,9 @@ if [[ ${EUID} == 0 ]] ; then
 else
   PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 fi
+
+# Disable completion when the input buffer is empty.
+shopt -s no_empty_cmd_completion
+
+# Enable history appending instead of overwriting when exiting.
+shopt -s histappend
