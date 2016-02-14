@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PACKAGES_FILE='packages'
-RAW_URL="https://raw.githubusercontent.com/brenj/dotfiles/master/gentoo"
+RAW_URL="https://raw.githubusercontent.com"
 
 # Remove gentoo config files to be replaced
 sudo rm -rf /etc/portage/package.use
