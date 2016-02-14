@@ -1,5 +1,6 @@
 app-editors/vim
 app-misc/tmux
 app-portage/gentoolkit
+dev-util/cmake
 dev-vcs/git
 net-misc/curl
