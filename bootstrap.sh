@@ -12,13 +12,13 @@ sudo mv package.use /etc/portage/package.use
 sudo chmod 644 /etc/portage/package.use
 
 echo "[+] Updating the portage tree"
-sudo emerge-webrsync
+sudo emerge-webrsync --quiet
 
 echo "[+] Installing packages"
 wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/packages
 while read -r package; do
   echo "Emerging package ${package}"
-  sudo emerge "${package}" &>/dev/null
+  sudo emerge --quiet "${package}" &>/dev/null
 done <"${PACKAGES_FILE}"
 
 echo "[+] Cloning dotfiles"
