@@ -38,8 +38,8 @@ ln -s dotfiles/.xmonad .xmonad
 wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-prompt.sh
 
 echo "[+] Installing node"
-wget -q -O - ${RAW_URL}/creationix/nvm/v0.30.2/install.sh |bash
-. ~/.bashrc
+wget -q -O - ${RAW_URL}/creationix/nvm/v0.30.2/install.sh |bash &>/dev/null
+. ~/.nvm/nvm.sh &>/dev/null
 nvm install node && nvm current >.nvmrc
 
 echo "[+] Configuring vim"
