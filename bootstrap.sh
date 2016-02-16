@@ -1,25 +1,8 @@
 #!/bin/bash
+#
+# Bootstrap a development environment.
 
-PACKAGES_FILE='packages'
 RAW_URL="https://raw.githubusercontent.com"
-
-# Remove gentoo config files to be replaced
-sudo rm -rf /etc/portage/package.use
-
-echo "[+] Setting Gentoo configuration files"
-wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/package.use
-sudo mv package.use /etc/portage/package.use
-sudo chmod 644 /etc/portage/package.use
-
-echo "[+] Updating the portage tree"
-sudo emerge-webrsync --quiet
-
-echo "[+] Installing packages"
-wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/packages
-while read -r package; do
-  echo "Emerging package ${package}"
-  sudo emerge --quiet "${package}" &>/dev/null
-done <"${PACKAGES_FILE}"
 
 echo "[+] Cloning dotfiles"
 git clone https://github.com/brenj/dotfiles.git
@@ -49,6 +32,3 @@ vim +PluginInstall +qall &>/dev/null
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer --tern-completer &>/dev/null
 cd
-
-echo "[+] Cleaning up"
-rm packages
