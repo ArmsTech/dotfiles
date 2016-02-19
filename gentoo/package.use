@@ -1,2 +1,3 @@
+app-editors/neovim python nvimpager
 app-editors/vim python vim-pager
 dev-vcs/git -pcre -perl
