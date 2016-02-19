@@ -7,6 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "cmiles/gentoo-amd64-minimal"
   config.vm.hostname = "gentoo.box"
+  config.vm.network "forwarded_port", guest: 60001, host: 60001, protocol: "udp"
   config.vm.provision "shell", path: "provision.sh"
   config.vm.provision "shell", privileged: false, path: "../bootstrap.sh"
   config.vm.synced_folder ".", "/vagrant", disabled: true
