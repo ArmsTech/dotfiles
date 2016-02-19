@@ -1,2 +1,2 @@
-app-editors/vim debug python vim-pager
+app-editors/vim python vim-pager
 dev-vcs/git -pcre -perl
