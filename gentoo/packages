@@ -4,3 +4,4 @@ app-portage/gentoolkit
 dev-util/cmake
 dev-vcs/git
 net-misc/curl
+net-misc/mosh
