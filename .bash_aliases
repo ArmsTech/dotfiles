@@ -1,8 +1,8 @@
+# Declare bash aliases
+# vi: set filetype=sh :
 alias c='xclip -selection clipboard &>/dev/null'
-alias g='gvim'
 alias p='xclip -o -selection clipboard'
 alias s='tmux save-buffer - |c'
-alias v='vim'
 
 alias ga='git add'
 alias gb='git branch'
