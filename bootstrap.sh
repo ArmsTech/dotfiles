@@ -32,3 +32,8 @@ vim +PluginInstall +qall &>/dev/null
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer --tern-completer &>/dev/null
 cd
+
+echo "[+] Configuring NeoVim"
+cd ~/.config
+ln -s ~/dotfiles/.vim nvim
+cd
