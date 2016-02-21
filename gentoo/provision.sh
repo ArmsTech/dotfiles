@@ -7,26 +7,25 @@ if [[ ${EUID} != 0 ]] ; then
   exit 1
 fi
 
-PACKAGES_FILE='packages'
-RAW_URL="https://raw.githubusercontent.com"
+PACKAGES_FILE='dotfiles/gentoo/packages'
+
+echo "[+] Cloning dotfiles"
+git clone https://github.com/brenj/dotfiles.git
 
 rm -rf /etc/portage/package.use
 
 echo "[+] Setting Gentoo configuration files"
-wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/package.use
-mv package.use /etc/portage/package.use
-chmod 644 /etc/portage/package.use
-cp package.accept_keywords/* /etc/portage/package.accept_keywords
+mv dotfiles/gentoo/package.use /etc/portage/package.use
+cp dotfiles/gentoo/package.accept_keywords/* /etc/portage/package.accept_keywords
 
 echo "[+] Updating the portage tree"
 emerge-webrsync --quiet
 
 echo "[+] Installing packages"
-wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/packages
 while read -r package; do
   echo "Emerging package ${package}"
   emerge --quiet "${package}" &>/dev/null
 done <"${PACKAGES_FILE}"
 
 echo "[+] Cleaning up"
-rm packages
+rm -rf dotfiles
