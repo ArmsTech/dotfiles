@@ -1,0 +1,12 @@
+# required by app-editors/neovim-0.1.2::gentoo
+# required by app-editors/neovim (argument)
+
+app-emulation/virtualbox-guest-additions ~x86 ~amd64
+x11-drivers/xf86-video-virtualbox ~x86 ~amd64
+=dev-libs/unibilium-1.1.4 ~amd64
+=dev-libs/libtermkey-0.18 ~amd64
+=dev-libs/libvterm-0.0_pre20151022 ~amd64
+=app-editors/neovim-0.1.2 ~amd64
+=dev-python/neovim-python-client-0.1.0 ~amd64
+=dev-libs/msgpack-1.1.0 ~amd64
+=dev-lua/messagepack-0.3.2 ~amd64
