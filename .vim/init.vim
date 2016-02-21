@@ -22,7 +22,7 @@ Plugin 'LargeFile'
 call vundle#end()
 
 filetype plugin indent on
-colorscheme elflord
+syntax on
 
 " }}} Setup
 " Options {{{
