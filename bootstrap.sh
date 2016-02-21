@@ -8,14 +8,14 @@ echo "[+] Cloning dotfiles"
 git clone https://github.com/brenj/dotfiles.git
 
 echo "[+] Linking configuration files"
-ln -s dotfiles/.bashrc .bashrc
-ln -s dotfiles/.bash_aliases .bash_aliases
-ln -s dotfiles/.bash_profile .bash_profile
-ln -s dotfiles/.gvimrc .gvimrc
-ln -s dotfiles/.tmux.conf .tmux.conf
-ln -s dotfiles/.vim .vim
-ln -s dotfiles/.vimrc .vimrc
-ln -s dotfiles/.xmonad .xmonad
+ln -s ~/dotfiles/.bashrc .bashrc
+ln -s ~/dotfiles/.bash_aliases .bash_aliases
+ln -s ~/dotfiles/.bash_profile .bash_profile
+ln -s ~/dotfiles/.gvimrc .gvimrc
+ln -s ~/dotfiles/.tmux.conf .tmux.conf
+ln -s ~/dotfiles/.vim .vim
+ln -s ~/dotfiles/.vimrc .vimrc
+ln -s ~/dotfiles/.xmonad .xmonad
 
 # Get script for git prompt
 wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-prompt.sh
@@ -23,7 +23,7 @@ wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-pro
 echo "[+] Installing node"
 wget -q -O - ${RAW_URL}/creationix/nvm/v0.30.2/install.sh |bash
 . ~/.nvm/nvm.sh
-nvm install node &>/dev/null && nvm current >.nvmrc
+nvm install node &>/dev/null && nvm current >~/.nvmrc
 
 echo "[+] Configuring vim"
 mkdir ~/.vim/bundle
