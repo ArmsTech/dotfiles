@@ -16,6 +16,7 @@ echo "[+] Setting Gentoo configuration files"
 wget -q "${RAW_URL}"/brenj/dotfiles/master/gentoo/package.use
 mv package.use /etc/portage/package.use
 chmod 644 /etc/portage/package.use
+cp package.accept_keywords/* /etc/portage/package.accept_keywords
 
 echo "[+] Updating the portage tree"
 emerge-webrsync --quiet
