@@ -34,6 +34,6 @@ install.py --clang-completer --tern-completer &>/dev/null
 cd
 
 echo "[+] Configuring NeoVim"
-cd .config
-ln -s dotfiles/.vim nvim
+mkdir .config && cd .config
+ln -s ~/dotfiles/.vim nvim
 cd
