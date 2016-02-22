@@ -7,16 +7,18 @@ if [[ ${EUID} != 0 ]] ; then
   exit 1
 fi
 
-PACKAGES_FILE='dotfiles/gentoo/packages'
+PACKAGES_FILE='packages'
 
-echo "[+] Cloning dotfiles"
-git clone https://github.com/brenj/dotfiles.git
+echo "[+] Downloading configuration files"
+# Cloning won't work until git is recompiled (later)
+wget -q https://github.com/brenj/dotfiles/archive/master.zip
+unzip -qq master.zip && cd dotfiles-master/gentoo
 
 rm -rf /etc/portage/package.use
 
-echo "[+] Setting Gentoo configuration files"
-mv dotfiles/gentoo/package.use /etc/portage/package.use
-cp dotfiles/gentoo/package.accept_keywords/* /etc/portage/package.accept_keywords
+echo "[+] Installing Gentoo configuration files"
+mv package.use /etc/portage/package.use
+cp package.accept_keywords/* /etc/portage/package.accept_keywords
 
 echo "[+] Updating the portage tree"
 emerge-webrsync --quiet
@@ -28,4 +30,6 @@ while read -r package; do
 done <"${PACKAGES_FILE}"
 
 echo "[+] Cleaning up"
-rm -rf dotfiles
+cd
+rm master.zip
+rm -rf dotfiles-master
