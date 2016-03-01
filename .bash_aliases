@@ -18,3 +18,5 @@ alias gu='git reset --soft HEAD~1'
 
 alias g='gvim'
 alias v='vim'
+
+alias ..='cd ..'
