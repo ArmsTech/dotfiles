@@ -20,4 +20,4 @@ alias g='gvim'
 alias v='vim'
 
 alias ..='cd ..'
-alias mkdir='mkdir -p'
+alias mkdir='mkdir -pv'
