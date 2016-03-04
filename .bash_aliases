@@ -21,3 +21,4 @@ alias v='vim'
 
 alias ..='cd ..'
 alias mkdir='mkdir -pv'
+alias h='history |grep'
