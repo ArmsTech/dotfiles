@@ -16,9 +16,11 @@ alias go='git checkout'
 alias gs='git status'
 alias gu='git reset --soft HEAD~1'
 
-alias g='gvim'
-alias v='vim'
 
 alias ..='cd ..'
-alias mkdir='mkdir -pv'
+alias g='gvim'
 alias h='history |grep'
+alias l='ls -lhA'
+alias v='vim'
+
+alias mkdir='mkdir -pv'
