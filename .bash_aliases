@@ -24,3 +24,4 @@ alias l='ls -lhA'
 alias v='vim'
 
 alias mkdir='mkdir -pv'
+alias ps="ps -ef"
