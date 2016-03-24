@@ -8,14 +8,14 @@ echo "[+] Cloning dotfiles"
 git clone https://github.com/brenj/dotfiles.git
 
 echo "[+] Linking configuration files"
-ln -s dotfiles/.bashrc .bashrc
-ln -s dotfiles/.bash_aliases .bash_aliases
-ln -s dotfiles/.bash_profile .bash_profile
-ln -s dotfiles/.gvimrc .gvimrc
-ln -s dotfiles/.tmux.conf .tmux.conf
-ln -s dotfiles/.vim .vim
-ln -s dotfiles/.vimrc .vimrc
-ln -s dotfiles/.xmonad .xmonad
+ln -sf dotfiles/.bashrc .bashrc
+ln -sf dotfiles/.bash_aliases .bash_aliases
+ln -sf dotfiles/.bash_profile .bash_profile
+ln -sf dotfiles/.gvimrc .gvimrc
+ln -sf dotfiles/.tmux.conf .tmux.conf
+ln -sf dotfiles/.vim .vim
+ln -sf dotfiles/.vimrc .vimrc
+ln -sf dotfiles/.xmonad .xmonad
 
 # Get script for git prompt
 wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-prompt.sh
