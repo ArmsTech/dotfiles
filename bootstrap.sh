@@ -17,6 +17,9 @@ ln -sf dotfiles/.vim .vim
 ln -sf dotfiles/.vimrc .vimrc
 ln -sf dotfiles/.xmonad .xmonad
 
+# Source bashrc
+. .bashrc
+
 # Get script for git prompt
 wget -O .git-prompt.sh -q "${RAW_URL}"/git/git/master/contrib/completion/git-prompt.sh
 
