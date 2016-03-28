@@ -2,6 +2,11 @@
 #
 # Bootstrap a development environment.
 
+if [ "${PWD}" != "${HOME}" ]; then
+  echo "Must be run from home directory"
+  exit 1
+fi
+
 RAW_URL="https://raw.githubusercontent.com"
 
 echo "[+] Cloning dotfiles"
