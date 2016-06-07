@@ -43,5 +43,5 @@ cd
 
 echo "[+] Configuring NeoVim"
 mkdir .config && cd .config
-ln -s ~/dotfiles/.vim nvim
+ln -sf ~/dotfiles/.vim nvim
 cd
