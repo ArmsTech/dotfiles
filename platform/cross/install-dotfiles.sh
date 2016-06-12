@@ -6,6 +6,11 @@ STARTING_DIR="$(pwd)"
 
 cd
 
+if [ -d "dotfiles" ]; then
+  echo "[-] Removing existing dotfiles directory"
+  rm -rf dotfiles
+fi
+
 echo "[+] Cloning dotfiles"
 git clone https://github.com/brenj/dotfiles.git
 
