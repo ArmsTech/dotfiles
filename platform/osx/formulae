@@ -1,5 +1,7 @@
+cmake
 git
 httpie
+vim
 macvim --with-override-system-vim
 neovim/neovim/neovim
 wget
