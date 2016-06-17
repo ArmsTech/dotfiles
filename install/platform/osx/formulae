@@ -5,4 +5,5 @@ python
 macvim --with-override-system-vim
 neovim/neovim/neovim
 node
+tmux
 wget
