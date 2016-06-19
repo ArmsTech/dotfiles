@@ -1,2 +1,2 @@
 # dotfiles
-Configuration files for Linux.
+Configuration files for Linux and macOS.
