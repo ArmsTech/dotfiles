@@ -18,6 +18,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -136,6 +137,9 @@ noremap <tab> %
 " }}} Remap Keys
 " Plugins {{{
 
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key='<tab>'
+
 let g:ycm_autoclose_preview_window_after_completion=0
 let g:ycm_collect_identifiers_from_comments_and_strings=1
 let g:ycm_complete_in_comments=1
@@ -152,6 +156,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " Auto Commands {{{
 
 if has("autocmd")
+  au FileType html,css EmmetInstall
   au BufNewFile,BufRead *.jinja2 setfiletype html
   au bufwritepost .vimrc source $MYVIMRC
   au filetype netrw call Netrw_Maps_For_Colemak()
