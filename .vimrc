@@ -137,8 +137,9 @@ noremap <tab> %
 " }}} Remap Keys
 " Plugins {{{
 
-let g:user_emmet_install_global = 0
+let g:user_emmet_install_global=0
 let g:user_emmet_leader_key='<tab>'
+let g:user_emmet_settings ={'indentation' : '  '}
 
 let g:ycm_autoclose_preview_window_after_completion=0
 let g:ycm_collect_identifiers_from_comments_and_strings=1
