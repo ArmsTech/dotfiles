@@ -81,7 +81,7 @@ nnoremap <leader><bar> <c-w>v
 nnoremap <leader>- <c-w>s
 nnoremap <leader>c <c-w>w
 nnoremap <leader>C <c-w>w<c-w>w
-nnoremap <leader>e :e %:p:h<cr>
+nnoremap <leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
 nnoremap <leader>G :gui<cr>
 nnoremap <leader>m <c-w>_<c-w><bar>
