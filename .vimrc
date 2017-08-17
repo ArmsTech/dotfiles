@@ -31,7 +31,6 @@ colorscheme elflord
 
 set autoindent                          " auto indenting is on
 set colorcolumn=79                      " show line to enforce 80 char lines
-set completeopt-=preview                " do not show ycm preview window
 set copyindent                          " copy previous auto indent
 set cursorline                          " show a cursor line
 set encoding=utf-8                      " set file encoding
