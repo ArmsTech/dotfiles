@@ -82,28 +82,30 @@ hi CursorLine term=bold cterm=bold
 
 let mapleader=","
 
-map <leader>f <leader><leader>f
-map <leader>w <leader><leader>w
-map <leader>W <leader><leader>W
-
-nnoremap <leader><space> :nohlsearch<cr>
-nnoremap <leader><bar> <c-w>v
-nnoremap <leader>- <c-w>s
-nnoremap <leader>c <c-w>w
-nnoremap <leader>C <c-w>w<c-w>w
 nnoremap <leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
-nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
+inoremap <leader>i <esc>
+nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>G :gui<cr>
-nnoremap <leader>m <c-w>_<c-w><bar>
-nnoremap <leader>mu <c-w>=
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>rw mz:%s/\s\+$//<cr>:let @/=''<cr>`z
-nnoremap <leader>s :set spell!<cr>
+nnoremap <leader>s :w<cr>
 nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>x <c-w>x
 nnoremap <leader>z :wq!<cr>
 
-inoremap <leader>i <esc>
+" Vim splits
+nnoremap <leader><bar> <c-w>v
+nnoremap <leader>- <c-w>s
+nnoremap <leader>n <c-w>w
+nnoremap <leader>p <c-w>w<c-w>w
+nnoremap <leader>m <c-w>_<c-w><bar>
+nnoremap <leader>= <c-w>=
+
+" StupidEasyMotion
+map <leader>w <leader><leader>w
+
+" YouCompleteMe
+nnoremap <leader>yg :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 " }}} Leaders
 " Remap Keys {{{
