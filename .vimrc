@@ -162,7 +162,7 @@ let g:jsx_ext_required=0
 
 let g:used_javascript_libs='chai,jquery,react,underscore'
 
-let g:user_emmet_install_global=0
+" let g:user_emmet_install_global=0
 let g:user_emmet_leader_key='<tab>'
 let g:user_emmet_settings ={'indentation' : '  '}
 
@@ -184,7 +184,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " Auto Commands {{{
 
 if has("autocmd")
-  au FileType html,css EmmetInstall
+  " au FileType html,css EmmetInstall
   au BufNewFile,BufRead *.jinja2 setfiletype html
   au bufwritepost .vimrc source $MYVIMRC
   au filetype netrw call Netrw_Maps_For_Colemak()
