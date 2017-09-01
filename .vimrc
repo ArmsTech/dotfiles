@@ -19,6 +19,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on
@@ -136,6 +137,8 @@ noremap <tab> %
 
 " }}} Remap Keys
 " Plugins {{{
+
+let g:jsx_ext_required=0
 
 let g:user_emmet_install_global=0
 let g:user_emmet_leader_key='<tab>'
