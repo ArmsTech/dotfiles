@@ -6,23 +6,29 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Plugin manager
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'nvie/vim-flake8'
+
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'joequery/Stupid-EasyMotion'
+Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'SirVer/ultisnips'
-Plugin 'joequery/Stupid-EasyMotion'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'Shutnik/jshint2.vim'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'Valloric/YouCompleteMe'
+
+" Python
+Plugin 'nvie/vim-flake8'
+
+" JavaScript and the web
 Plugin 'mattn/emmet-vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'marijnh/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'othree/javascript-libraries-syntax.vim'
 
 call vundle#end()
 filetype plugin indent on
