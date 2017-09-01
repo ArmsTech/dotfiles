@@ -82,7 +82,7 @@ hi CursorLine term=bold cterm=bold
 
 let mapleader=","
 
-nnoremap <leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <leader>e :e <c-r>=expand('%:p:h') . '/'<cr>
 inoremap <leader>i <esc>
 nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>G :gui<cr>
@@ -93,6 +93,9 @@ nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>x <c-w>x
 nnoremap <leader>z :wq!<cr>
 
+" StupidEasyMotion
+map <leader>w <leader><leader>w
+
 " Vim splits
 nnoremap <leader><bar> <c-w>v
 nnoremap <leader>- <c-w>s
@@ -100,9 +103,6 @@ nnoremap <leader>n <c-w>w
 nnoremap <leader>p <c-w>w<c-w>w
 nnoremap <leader>m <c-w>_<c-w><bar>
 nnoremap <leader>= <c-w>=
-
-" StupidEasyMotion
-map <leader>w <leader><leader>w
 
 " YouCompleteMe
 nnoremap <leader>yg :YcmCompleter GoToDefinitionElseDeclaration<cr>
