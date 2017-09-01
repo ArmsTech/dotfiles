@@ -93,6 +93,15 @@ nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>x <c-w>x
 nnoremap <leader>z :wq!<cr>
 
+" Fugitive
+nnoremap <leader>g? :map <leader>g<cr>
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gg :Ggrep
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gw :Gbrowse<cr>
+
 " StupidEasyMotion
 map <leader>w <leader><leader>w
 
