@@ -20,13 +20,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'Valloric/YouCompleteMe'
 
-" Python
-Plugin 'nvie/vim-flake8'
-
 " JavaScript and the web
 Plugin 'mattn/emmet-vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -194,7 +190,6 @@ if has("autocmd")
   au BufNewFile,BufRead *.jinja2 setfiletype html
   au bufwritepost .vimrc source $MYVIMRC
   au filetype netrw call Netrw_Maps_For_Colemak()
-  au filetype javascript nnoremap <buffer> <F7> :JSHint<CR>
 endif
 
 " }}} Auto Commands
