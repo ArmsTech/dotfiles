@@ -10,7 +10,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'fholgado/minibufexpl.vim'
+" Plugin 'fholgado/minibufexpl.vim'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
