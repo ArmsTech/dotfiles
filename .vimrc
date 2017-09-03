@@ -162,17 +162,16 @@ noremap <tab> %
 " }}} Remap Keys
 " Plugins {{{
 
+let g:user_emmet_leader_key=','
+let g:user_emmet_settings={'indentation' : '  '}
+
 let g:jsx_ext_required=0
+let g:used_javascript_libs='chai,jquery,react,underscore'
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
-
-let g:used_javascript_libs='chai,jquery,react,underscore'
-
-let g:user_emmet_leader_key=','
-let g:user_emmet_settings ={'indentation' : '  '}
 
 let g:ycm_autoclose_preview_window_after_completion=0
 let g:ycm_collect_identifiers_from_comments_and_strings=1
