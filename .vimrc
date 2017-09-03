@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'joequery/Stupid-EasyMotion'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
@@ -69,6 +70,9 @@ set showmode                            " show current mode
 set smartcase                           " ignore case when lowercase
 set smarttab                            " tabs are only used for indentation
 set softtabstop=4                       " simulate tabstop width != tabstop
+set statusline+=%#warningmsg#           " add Syntastic status line
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 set tags+=./tags
 set tabstop=4                           " a <tab> is equvalent to x spaces
 set ttyfast                             " scroll fast in terminal
@@ -159,6 +163,11 @@ noremap <tab> %
 " Plugins {{{
 
 let g:jsx_ext_required=0
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
 
 let g:used_javascript_libs='chai,jquery,react,underscore'
 
