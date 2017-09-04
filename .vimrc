@@ -10,7 +10,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'jiangmiao/auto-pairs'
-" Plugin 'fholgado/minibufexpl.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
@@ -93,6 +93,16 @@ nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>x <c-w>x
 nnoremap <leader>z :wq!<cr>
 
+" CtrlP
+nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>p? :map <leader>p<cr>
+nnoremap <leader>p :CtrlP<cr>
+nnoremap <leader>pb :CtrlPBuffer<cr>
+nnoremap <leader>pc :CtrlPCurFile<cr>
+nnoremap <leader>pd :CtrlPDir<cr>
+nnoremap <leader>pf :CtrlPMRU<cr>
+nnoremap <leader>pm :CtrlPMixed<cr>
+
 " Fugitive
 nnoremap <leader>g? :map <leader>g<cr>
 nnoremap <leader>gb :Gblame<cr>
@@ -108,8 +118,7 @@ map <leader>w <leader><leader>w
 " Vim splits
 nnoremap <leader><bar> <c-w>v
 nnoremap <leader>- <c-w>s
-nnoremap <leader>n <c-w>w
-nnoremap <leader>p <c-w>w<c-w>w
+nnoremap <leader>c <c-w>w
 nnoremap <leader>m <c-w>_<c-w><bar>
 nnoremap <leader>= <c-w>=
 
@@ -157,6 +166,10 @@ noremap <tab> %
 
 " }}} Remap Keys
 " Plugins {{{
+
+let g:ctrlp_by_filename=1
+let g:ctrlp_regexp=1
+let g:ctrlp_show_hidden=1
 
 let g:user_emmet_leader_key=','
 let g:user_emmet_settings={'indentation' : '  '}
