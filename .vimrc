@@ -115,14 +115,26 @@ nnoremap <leader>gw :Gbrowse<cr>
 " StupidEasyMotion
 map <leader>w <leader><leader>w
 
-" Vim splits
+" Syntastic
+nnoremap <leader>s? :map <leader>s<cr>
+nnoremap <leader>sc :SyntasticCheck<cr>
+nnoremap <leader>st :SyntasticToggleMode<cr>
+
+" Vim window splits
 nnoremap <leader><bar> <c-w>v
 nnoremap <leader>- <c-w>s
 nnoremap <leader>c <c-w>w
 nnoremap <leader>m <c-w>_<c-w><bar>
 nnoremap <leader>= <c-w>=
 
+" Vim location window
+nnoremap <leader>lc :lclose<cr>
+nnoremap <leader>ln :lnext<cr>
+nnoremap <leader>lo :lopen<cr>
+nnoremap <leader>lp :lprevious<cr>
+
 " YouCompleteMe
+nnoremap <leader>y? :map <leader>y<cr>
 nnoremap <leader>yg :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 " }}} Leaders
@@ -172,7 +184,7 @@ let g:ctrlp_regexp=1
 let g:ctrlp_show_hidden=1
 
 let g:user_emmet_leader_key=','
-let g:user_emmet_settings={'indentation' : '  '}
+let g:user_emmet_settings={'indentation': '  '}
 
 let g:jsx_ext_required=0
 let g:used_javascript_libs='chai,jquery,react,underscore'
@@ -181,6 +193,7 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map={"mode": "passive"}
 let g:syntastic_python_checkers = ['flake8']
 
 let g:ycm_autoclose_preview_window_after_completion=0
