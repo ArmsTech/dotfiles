@@ -119,6 +119,7 @@ map <leader>w <leader><leader>w
 " Syntastic
 nnoremap <leader>s? :map <leader>s<cr>
 nnoremap <leader>sc :SyntasticCheck<cr>
+nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>st :SyntasticToggleMode<cr>
 
 " Vim window splits
@@ -191,7 +192,7 @@ let g:jsx_ext_required=0
 let g:used_javascript_libs='chai,jquery,react,underscore'
 
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map={"mode": "passive"}
