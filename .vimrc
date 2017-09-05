@@ -38,6 +38,7 @@ colorscheme elflord
 
 set autoindent                          " auto indenting is on
 set colorcolumn=79                      " show line to enforce 80 char lines
+set completeopt-=preview                " don't show preview window
 set copyindent                          " copy previous auto indent
 set cursorline                          " show a cursor line
 set encoding=utf-8                      " set file encoding
@@ -196,7 +197,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map={"mode": "passive"}
 let g:syntastic_python_checkers = ['flake8']
 
-let g:ycm_autoclose_preview_window_after_completion=0
+let g:ycm_add_preview_to_completeopt=0
 let g:ycm_collect_identifiers_from_comments_and_strings=1
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_complete_in_comments=1
