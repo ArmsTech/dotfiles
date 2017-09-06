@@ -77,13 +77,17 @@ set ttyfast                             " scroll fast in terminal
 set undolevels=1000                     " increase undo history
 set updatetime=250                      " delay for writing to swap file
 set visualbell                          " no flashing
+
+" }}} Options
+" Colors {{{
+
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 hi CursorLine term=bold cterm=bold
 hi GitGutterAdd ctermfg=green
 hi GitGutterChange ctermfg=green
 hi GitGutterDelete ctermfg=red
 
-" }}} Options
+" }}} Colors
 " Leaders {{{
 
 let mapleader=","
