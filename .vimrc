@@ -70,9 +70,6 @@ set showmode                            " show current mode
 set smartcase                           " ignore case when lowercase
 set smarttab                            " tabs are only used for indentation
 set softtabstop=4                       " simulate tabstop width != tabstop
-set statusline+=%#warningmsg#           " add Syntastic status line
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 set tags+=./tags
 set tabstop=4                           " a <tab> is equvalent to x spaces
 set ttyfast                             " scroll fast in terminal
