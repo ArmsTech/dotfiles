@@ -18,6 +18,7 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
@@ -77,6 +78,9 @@ set undolevels=1000                     " increase undo history
 set visualbell                          " no flashing
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 hi CursorLine term=bold cterm=bold
+hi GitGutterAdd ctermfg=green
+hi GitGutterChange ctermfg=green
+hi GitGutterDelete ctermfg=red
 
 " }}} Options
 " Leaders {{{
@@ -112,6 +116,13 @@ nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gg :Ggrep
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gw :Gbrowse<cr>
+
+" GitGutter
+nnoremap <leader>h? :map <leader>h<cr>
+nnoremap <leader>ha :GitGutterStageHunk<cr>
+nnoremap <leader>hn :GitGutterNextHunk<cr>
+nnoremap <leader>hp :GitGutterPrevHunk<cr>
+nnoremap <leader>hr :GitGutterUndoHunk<cr>
 
 " StupidEasyMotion
 map <leader>w <leader><leader>w
@@ -186,6 +197,8 @@ let g:airline_theme='minimalist'
 let g:ctrlp_by_filename=1
 let g:ctrlp_regexp=1
 let g:ctrlp_show_hidden=1
+
+let g:gitgutter_map_keys=0
 
 let g:user_emmet_leader_key=','
 let g:user_emmet_settings={'indentation': '  '}
