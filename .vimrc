@@ -14,6 +14,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
@@ -180,6 +183,8 @@ noremap <tab> %
 
 " }}} Remap Keys
 " Plugins {{{
+
+let g:airline_theme='minimalist'
 
 let g:ctrlp_by_filename=1
 let g:ctrlp_regexp=1
