@@ -203,6 +203,8 @@ noremap <tab> %
 
 let g:airline_theme='minimalist'
 
+let g:bufferline_echo=0
+
 let g:ctrlp_by_filename=1
 let g:ctrlp_regexp=1
 let g:ctrlp_show_hidden=1
