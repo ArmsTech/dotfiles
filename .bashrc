@@ -16,10 +16,7 @@ get_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ ( \1 )/'
 }
 
-if [[ $- != *i* ]] ; then
-  # Shell is non-interactive. Exit.
-  return
-fi
+export PATH=$PATH:~/tools
 
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
