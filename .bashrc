@@ -1,5 +1,10 @@
 # ~/.bashrc
 
+if [[ $- != *i* ]] ; then
+  # Shell is non-interactive. Exit.
+  return
+fi
+
 CYAN="\[\e[01;36m\]"
 GREEN="\[\e[01;32m\]"
 PINK="\[\e[01;35m\]"
