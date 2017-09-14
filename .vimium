@@ -1,4 +1,4 @@
-" movement keys
+" Movement keys
 unmap h
 unmap j
 unmap k
@@ -13,8 +13,10 @@ map s scrollUp
 unmap t
 map t scrollDown
 
-" tab movement keys
+" Tab movement keys
 unmap K
 unmap J
 map N previousTab
 map E nextTab
+
+" Characters used for link hints: abcdefghijklmnopqrstuvwxyz
