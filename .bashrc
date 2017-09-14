@@ -16,6 +16,10 @@ get_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ ( \1 )/'
 }
 
+if [ -z "${DISPLAY}" ]; then
+  export DISPLAY=:0
+fi
+
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/tools
 
 if [ -f ~/.bash_aliases ]; then
