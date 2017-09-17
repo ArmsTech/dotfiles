@@ -166,18 +166,12 @@ nnoremap <leader>yg :YcmCompleter GoToDefinitionElseDeclaration<cr>
 " remap ; to : for entering command mode
 nnoremap ; :
 
-" remap motion keys for colemak (normal mode)
-nnoremap n h
-nnoremap e l
-nnoremap s k
-nnoremap t j
+" remap motion keys for colemak
+noremap n h
+noremap e l
+noremap s k
+noremap t j
 
-" remap motion keys for colemak (visual mode)
-xnoremap n h
-xnoremap e l
-xnoremap s k
-xnoremap t j
-"
 " remap keys clobbered for colemak
 nnoremap k n
 nnoremap l e
