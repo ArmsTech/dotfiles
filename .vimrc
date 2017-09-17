@@ -98,6 +98,7 @@ inoremap <leader>i <esc>
 nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>G :gui<cr>
 nnoremap <leader>q :q!<cr>
+nnoremap <leader>r :so %<cr>
 nnoremap <leader>rw mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap <leader>s :w<cr>
 nnoremap <leader>v :edit $MYVIMRC<cr>
