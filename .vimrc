@@ -173,10 +173,11 @@ noremap s k
 noremap t j
 
 " remap keys clobbered for colemak
-nnoremap k n
-nnoremap l e
-nnoremap h s
-nnoremap j t
+noremap k n
+noremap l e
+noremap L E
+noremap h s
+noremap j t
 
 " go to beginning and end of line with *strong* motion keys
 noremap N ^
