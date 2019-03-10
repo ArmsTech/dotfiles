@@ -31,3 +31,6 @@ shopt -s no_empty_cmd_completion
 
 # Enable history appending instead of overwriting when exiting.
 shopt -s histappend
+
+# Load SSH agent and keys
+eval `keychain --eval --agents ssh id_rsa_gh`
