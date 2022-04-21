@@ -12,6 +12,9 @@ WHITE="\[\e[0m\]"
 
 PS1="\$? [ ${GREEN}\u${WHITE}@${GREEN}\h${WHITE} ] ${CYAN}\w${PINK}\$(get_git_branch)${WHITE}\n\$> "
 
+EDITOR="vim"
+VISUAL="$EDITOR"
+
 get_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ ( \1 )/'
 }

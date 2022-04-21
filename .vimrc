@@ -77,7 +77,7 @@ set tabstop=4                           " a <tab> is equvalent to x spaces
 set ttyfast                             " scroll fast in terminal
 set undolevels=1000                     " increase undo history
 set updatetime=250                      " delay for writing to swap file
-set visualbell                          " no flashing
+set visualbell t_vb=                    " no flashing
 
 " }}} Options
 " Colors {{{
