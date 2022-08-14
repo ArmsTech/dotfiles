@@ -1,13 +1,15 @@
 priority -50
 
-# snippet #!      "python shebang"
-# snippet if__    "script entry boilerplate"
+# snippet #!      "python3 shebang"
+# snippet #!2     "python2 shebang"
+# snippet ifmain  "script entry boilerplate"
+# snippet pr      "print something"
 # snippet pp      "pprint something"
 # snippet im      "import"
-# snippet from    "from module import name"
+# snippet fr      "from module import name"
 # snippet wi      "with"
 # snippet wh      "while"
-# snippet dowh    "do while"
+# snippet do      "do while"
 # snippet lam     "lambda"
 # snippet arg     "args & kwargs"
 # snippet for     "for"
@@ -39,23 +41,33 @@ priority -50
 # snippet "       "triple quoted string (double quotes)"
 # snippet '       "triple quoted string (single quotes)"
 
-#! header
-snippet #! "shebang" b
-#!/usr/bin/env python
-# encoding: utf-8
+snippet #! "python3 shebang" b
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 $0
 endsnippet
 
 
-snippet if__ "entry" b
-if __name__ == '__main__':
+snippet #!2 "python2 shebang" b
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+$0
+endsnippet
+
+
+snippet ifmain "script entry boilerplate" b
+if __name__ == "__main__":
 	${1:main()}$0
 endsnippet
 
 
+snippet pr "print" b
+print(${1})$0
+endsnippet
+
+
 snippet pp "pprint" b
-import pprint; pprint.pprint(${1})
-$0
+import pprint; pprint.pprint(${1})$0
 endsnippet
 
 
@@ -64,7 +76,7 @@ import ${0:module}
 endsnippet
 
 
-snippet from "from module import name" b
+snippet fr "from module import name" b
 from ${1:module} import ${2:Stuff}
 endsnippet
 
@@ -81,7 +93,7 @@ while ${1:condition}:
 endsnippet
 
 
-snippet dowh "do while" b
+snippet do "do while" b
 while True:
 	${1}
 	if ${0:condition}:
@@ -432,7 +444,7 @@ def write_google_docstring_args(args, snip):
 
 def write_init_body(args, parents, snip):
 	parents = [p.strip() for p in parents.split(",")]
-	parents = [p for p in parents if p != 'object']
+	parents = [p for p in parents if p != '']
 
 	for p in parents:
 		snip += p + ".__init__(self)"
@@ -473,7 +485,7 @@ endglobal
 
 
 snippet class "class with docstrings" b
-class ${1:MyClass}(${2:object}):
+class ${1:MyClass}(${2:}):
 
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
 
@@ -496,7 +508,7 @@ endsnippet
 
 
 snippet slotclass "class with slots and docstrings" b
-class ${1:MyClass}(${2:object}):
+class ${1:MyClass}(${2:}):
 
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
 `!p
@@ -550,6 +562,42 @@ def ${1:function}(${2:arg1}):
 	`!p snip.rv = triple_quotes(snip)`${4:TODO: Docstring for $1.}`!p
 write_function_docstring(t, snip) `
 	${0:pass}
+endsnippet
+
+
+##############
+# PROPERTIES #
+##############
+
+
+snippet propro "Read Only Property" b
+@property
+def ${1:name}(self):
+	${2:return self._$1}$0
+endsnippet
+
+
+snippet proprw "Read write property" b
+def ${1:name}():
+	`!p snip.rv = triple_quotes(snip) if t[2] else ''
+`${2:TODO: Docstring for $1.}`!p
+if t[2]:
+	snip >> 1
+	style = get_style(snip)
+	snip.rv += '\n' + snip.mkline('', indent='')
+	snip += format_return(style)
+	snip.rv += '\n' + snip.mkline('', indent='')
+	snip += triple_quotes(snip)
+else:
+	snip.rv = ""`
+	def fget(self):
+		return self._$1$0
+
+	def fset(self, value):
+		self._$1 = value
+	return locals()
+
+$1 = property(**$1(), doc=$1.__doc__)
 endsnippet
 
 
