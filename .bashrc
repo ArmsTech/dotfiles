@@ -37,3 +37,5 @@ shopt -s histappend
 
 # Load SSH agent and keys
 eval `keychain --eval --agents ssh id_rsa_gh`
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
