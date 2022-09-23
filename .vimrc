@@ -92,16 +92,21 @@ let mapleader=","
 
 nnoremap <leader>e :e <c-r>=expand('%:p:h') . '/'<cr>
 inoremap <leader>i <esc>
-nnoremap <leader><space> :nohlsearch<cr>
-nnoremap <leader>G :gui<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :so %<cr>
-nnoremap <leader>rw mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap <leader>s :w<cr>
 nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>x <c-w>x
 nnoremap <leader>y "*y"
 nnoremap <leader>z :wq!<cr>
+
+nnoremap <leader>G :gui<cr>
+
+" Remove white space
+nnoremap <leader>rw mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
+" Remove search highlights
+nnoremap <leader><space> :nohlsearch<cr>
 
 " FZF
 nnoremap <leader>b :Buffers<cr>
