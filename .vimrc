@@ -10,27 +10,20 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'joequery/Stupid-EasyMotion'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'Valloric/YouCompleteMe'
-
-" JavaScript and the web
-Plugin 'mattn/emmet-vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'junegunn/fzf.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'dense-analysis/ale'
+Plugin 'justinmk/vim-sneak'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,6 +57,7 @@ set nowrap                              " do not wrap lines
 set number                              " show line numbers
 set pastetoggle=<F2>                    " toggle :set paste on
 set relativenumber                      " set number hybrid mode
+set rtp+=/usr/local/opt/fzf             " enable fzf
 set shiftround                          " indent by mulitible of shiftwidth
 set shiftwidth=4                        " size of the indent is x spaces
 set showcmd                             " show info about the current command
@@ -105,15 +99,13 @@ nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>x <c-w>x
 nnoremap <leader>z :wq!<cr>
 
-" CtrlP
-nnoremap <leader>b :CtrlPBuffer<cr>
-nnoremap <leader>p? :map <leader>p<cr>
-nnoremap <leader>p :CtrlP<cr>
-nnoremap <leader>pb :CtrlPBuffer<cr>
-nnoremap <leader>pc :CtrlPCurFile<cr>
-nnoremap <leader>pd :CtrlPDir<cr>
-nnoremap <leader>pf :CtrlPMRU<cr>
-nnoremap <leader>pm :CtrlPMixed<cr>
+" FZF
+nnoremap <leader>b :Buffers<cr>
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>fl :Lines<cr>
+nnoremap <leader>fc :Commits<cr>
+nnoremap <leader>fb :BLines<cr>
+nnoremap <leader>fg :GFiles?<cr>
 
 " Fugitive
 nnoremap <leader>g? :map <leader>g<cr>
@@ -134,14 +126,9 @@ nnoremap <leader>hn :GitGutterNextHunk<cr>
 nnoremap <leader>hp :GitGutterPrevHunk<cr>
 nnoremap <leader>hr :GitGutterUndoHunk<cr>
 
-" StupidEasyMotion
-map <leader>w <leader><leader>w
-
-" Syntastic
-nnoremap <leader>s? :map <leader>s<cr>
-nnoremap <leader>sc :SyntasticCheck<cr>
-nnoremap <leader>sr :SyntasticReset<cr>
-nnoremap <leader>st :SyntasticToggleMode<cr>
+" Sneak
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
 
 " Vim window splits
 nnoremap <leader><bar> <c-w>v
@@ -155,10 +142,6 @@ nnoremap <leader>lc :lclose<cr>
 nnoremap <leader>ln :lnext<cr>
 nnoremap <leader>lo :lopen<cr>
 nnoremap <leader>lp :lprevious<cr>
-
-" YouCompleteMe
-nnoremap <leader>y? :map <leader>y<cr>
-nnoremap <leader>yg :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 " }}} Leaders
 " Remap Keys {{{
@@ -197,27 +180,24 @@ noremap <tab> %
 " }}} Remap Keys
 " Plugins {{{
 
-let g:airline_theme='minimalist'
+let g:ale_fixers = {'python': ['black', 'isort']}
+let g:ale_fix_on_save=1
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_linters_explicit=1
 
 let g:bufferline_echo=0
 
-let g:ctrlp_regexp=1
-let g:ctrlp_show_hidden=1
+let g:fzf_layout = { 'down': '~40%'  }
 
 let g:gitgutter_map_keys=0
 
-let g:user_emmet_leader_key=','
-let g:user_emmet_settings={'indentation': '  '}
+let g:lightline = {'colorscheme': 'solarized'}
 
-let g:jsx_ext_required=0
-let g:used_javascript_libs='chai,jquery,react,underscore'
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=0
-let g:syntastic_check_on_wq=0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_mode_map={"mode": "passive"}
-let g:syntastic_python_checkers = ['flake8']
+let g:sneak#s_next=1
+let g:sneak#label=1
 
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_auto_hover=''
