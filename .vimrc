@@ -36,6 +36,7 @@ colorscheme solarized8
 
 set autoindent                          " auto indenting is on
 set background=dark                     " set solarized scheme
+set colorcolumn=80                      " show line to enforce 80 char lines
 set completeopt-=preview                " don't show preview window
 set copyindent                          " copy previous auto indent
 set cursorline                          " show a cursor line
@@ -47,9 +48,10 @@ set history=1000                        " remember more history
 set hlsearch                            " highlight found search terms
 set ignorecase                          " ignore case when searching
 set incsearch                           " show matches while typing
+set laststatus=2                        " enable status line
 set lazyredraw                          " only redraw when required
 set list                                " show special characters
-set listchars=tab:▸\ ,eol:¬             " tab and EOL to TextMate chars
+set listchars=tab:..                    " show tab character as .. when used
 set nobackup                            " do not save backup files
 set noerrorbells                        " no beeping
 set noswapfile                          " do not create swap files
