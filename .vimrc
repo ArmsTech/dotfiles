@@ -29,13 +29,13 @@ call vundle#end()
 filetype plugin indent on
 
 syntax on
-colorscheme elflord
+colorscheme solarized8
 
 " }}} Setup
 " Options {{{
 
 set autoindent                          " auto indenting is on
-set colorcolumn=79                      " show line to enforce 80 char lines
+set background=dark                     " set solarized scheme
 set completeopt-=preview                " don't show preview window
 set copyindent                          " copy previous auto indent
 set cursorline                          " show a cursor line
