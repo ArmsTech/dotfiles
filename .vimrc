@@ -158,12 +158,15 @@ noremap e l
 noremap s k
 noremap t j
 
-" remap keys clobbered for colemak
+" next and previous match for incsearch
 noremap k n
-noremap l e
-noremap L E
+noremap K N
+
+" jump forwards to the end of a word with punctuation
+noremap l E
+
+" delete character and substitute text
 noremap h s
-noremap j t
 
 " go to beginning and end of line with *strong* motion keys
 noremap N ^
