@@ -1,28 +1,24 @@
 # Declare bash aliases
 # vi: set filetype=sh :
 
-# copy-paste
-alias c='xclip -selection clipboard &>/dev/null'
-alias p='xclip -o -selection clipboard'
-alias s='tmux save-buffer - |c'
+alias ..='cd ..'
+alias g='gvim'
+alias h='history'
+alias l='ls -lhA'
+alias v='vim'
 
-# git
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
 alias gd='git diff'
 alias gf='git fetch'
 alias go='git checkout'
+alias gp='git push origin'
 alias gs='git status'
 alias gu='git reset --soft HEAD~1'
 
-# history
-alias h='history'
-alias hg='history |grep'
+alias pb='pbcopy'
 
-alias ..='cd ..'
-alias g='gvim'
-alias l='ls -lhA'
-alias v='vim'
-
+alias cat='bat -p --paging=never'
+alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias mkdir='mkdir -pv'
