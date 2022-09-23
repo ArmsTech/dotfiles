@@ -127,7 +127,7 @@ nnoremap <leader>h? :map <leader>h<cr>
 nnoremap <leader>ha :GitGutterStageHunk<cr>
 nnoremap <leader>hn :GitGutterNextHunk<cr>
 nnoremap <leader>hp :GitGutterPrevHunk<cr>
-nnoremap <leader>hr :GitGutterUndoHunk<cr>
+nnoremap <leader>hu :GitGutterUndoHunk<cr>
 
 " Sneak
 map f <Plug>Sneak_s
