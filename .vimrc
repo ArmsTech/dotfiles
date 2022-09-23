@@ -70,19 +70,20 @@ set smarttab                            " tabs are only used for indentation
 set softtabstop=4                       " simulate tabstop width != tabstop
 set tags+=./tags                        " add path for tag files
 set tabstop=4                           " a <tab> is equvalent to x spaces
+set termguicolors                       " support millions of colors
 set ttyfast                             " scroll fast in terminal
 set undolevels=1000                     " increase undo history
-set updatetime=250                      " delay for writing to swap file
 set visualbell t_vb=                    " no flashing
 
 " }}} Options
 " Colors {{{
 
-hi Search cterm=NONE ctermfg=black ctermbg=yellow
-hi CursorLine term=bold cterm=bold
-hi GitGutterAdd ctermfg=green
-hi GitGutterChange ctermfg=green
-hi GitGutterDelete ctermfg=red
+hi IncSearch guibg=#FBF719
+hi Search guibg=#FBF719
+hi Sneak guifg=white guibg=red
+hi GitGutterAdd guifg=green
+hi GitGutterChange guifg=green
+hi GitGutterDelete guifg=red
 
 " }}} Colors
 " Leaders {{{
