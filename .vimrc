@@ -119,12 +119,12 @@ nnoremap <leader>fg :GFiles?<cr>
 " Fugitive
 nnoremap <leader>g? :map <leader>g<cr>
 nnoremap <leader>ga :Gwrite<cr>
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gb :G blame<cr>
+nnoremap <leader>gc :G commit<cr>
+nnoremap <leader>gd :G diff<cr>
 nnoremap <leader>gg :Ggrep
 nnoremap <leader>go :Gread<cr>
-nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gs :G status<cr>
 nnoremap <leader>gw :Gbrowse<cr>
 nnoremap <leader>gx :Gdelete<cr>
 
