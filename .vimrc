@@ -100,6 +100,7 @@ nnoremap <leader>rw mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap <leader>s :w<cr>
 nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>x <c-w>x
+nnoremap <leader>y "*y"
 nnoremap <leader>z :wq!<cr>
 
 " FZF
