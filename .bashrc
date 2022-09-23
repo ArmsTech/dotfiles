@@ -39,3 +39,5 @@ shopt -s histappend
 eval `keychain --eval --agents ssh id_rsa_gh`
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export BAT_THEME="Solarized (dark)"
