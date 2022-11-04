@@ -95,12 +95,22 @@ nnoremap <leader>y "*y"
 nnoremap <leader>z :wq!<cr>
 
 nnoremap <leader>G :gui<cr>
+nnoremap <leader>Y :<C-u>CocList -A --normal yank<cr>
 
 " Remove white space
 nnoremap <leader>rw mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
 " Remove search highlights
 nnoremap <leader><space> :nohlsearch<cr>
+
+" Coc
+nmap <leader>cd <Plug>(coc-definition)
+nmap <leader>cr <Plug>(coc-references)
+
+nmap <leader>db <Plug>VimspectorBreakpoints
+nmap <leader>dl <Plug>VimspectorLaunch
+nmap <leader>dr <Plug>VimspectorReset
+nmap <leader>dt <Plug>VimspectorToggleBreakpoint
 
 " FZF
 nnoremap <leader>b :Buffers<cr>
@@ -183,6 +193,9 @@ cmap w!! w !sudo tee % >/dev/null
 " use <tab> to match parenthesis, brackets, etc...
 noremap <tab> %
 
+" use the enter key for coc autocompletion
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
 " }}} Remap Keys
 " Plugins {{{
 
@@ -193,7 +206,15 @@ let g:ale_linters_explicit=1
 
 let g:bufferline_echo=0
 
-let g:fzf_layout = { 'down': '~40%'  }
+let g:coc_global_extensions = [
+    \ 'coc-docker',
+    \ 'coc-json',
+    \ 'coc-pyright',
+    \ 'coc-sh',
+    \ 'coc-snippets',
+    \ 'coc-yank',
+    \ ]
+
 
 let g:gitgutter_map_keys=0
 
@@ -204,15 +225,6 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 let g:sneak#s_next=1
 let g:sneak#label=1
-
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_auto_hover=''
-let g:ycm_collect_identifiers_from_comments_and_strings=1
-let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_complete_in_comments=1
-let g:ycm_complete_in_strings=1
-let g:ycm_key_list_select_completion=['<up>', '<down>']
-let g:ycm_seed_identifiers_with_syntax=1
 
 let g:UltiSnipsSnippetDirectories=["ultisnips-snippets"]
 let g:ultisnips_python_style="sphinx"
