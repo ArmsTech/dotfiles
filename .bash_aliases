@@ -13,7 +13,7 @@ alias gc='git commit'
 alias gd='git diff'
 alias gf='git fetch'
 alias go='git checkout'
-alias gp='git push origin'
+alias gp='git pull origin'
 alias gs='git status'
 alias gu='git reset --soft HEAD~1'
 
