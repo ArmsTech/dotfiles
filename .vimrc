@@ -72,12 +72,13 @@ set visualbell t_vb=                    " no flashing
 " }}} Options
 " Colors {{{
 
+hi FloatermBorder guifg=cyan
+hi GitGutterAdd guifg=green
+hi GitGutterChange guifg=yellow
+hi GitGutterDelete guifg=red
 hi IncSearch guibg=#FBF719
 hi Search guibg=#FBF719
 hi Sneak guifg=white guibg=red
-hi GitGutterAdd guifg=green
-hi GitGutterChange guifg=green
-hi GitGutterDelete guifg=red
 
 " }}} Colors
 " Leaders {{{
@@ -131,6 +132,7 @@ nnoremap <leader>go :Gread<cr>
 nnoremap <leader>gs :G status<cr>
 nnoremap <leader>gw :Gbrowse<cr>
 nnoremap <leader>gx :Gdelete<cr>
+map <leader>bb :GBrowse<cr>
 
 " GitGutter
 nnoremap <leader>h? :map <leader>h<cr>
@@ -138,6 +140,9 @@ nnoremap <leader>ha :GitGutterStageHunk<cr>
 nnoremap <leader>hn :GitGutterNextHunk<cr>
 nnoremap <leader>hp :GitGutterPrevHunk<cr>
 nnoremap <leader>hu :GitGutterUndoHunk<cr>
+
+" Floaterm
+nmap <leader>py :FloatermNew ipython<cr>
 
 " Sneak
 map f <Plug>Sneak_s
@@ -201,7 +206,10 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save=1
-let g:ale_linters = {'python': ['flake8']}
+let g:ale_linters = {
+    \ 'dockerfile': ['hadolint'],
+    \ 'python': ['flake8'], 'yaml': ['yamllint']
+    \ }
 let g:ale_linters_explicit=1
 
 let g:bufferline_echo=0
@@ -215,6 +223,13 @@ let g:coc_global_extensions = [
     \ 'coc-yank',
     \ ]
 
+let g:floaterm_keymap_new='<F7>'
+let g:floaterm_keymap_prev='<F8>'
+let g:floaterm_keymap_next='<F9>'
+let g:floaterm_keymap_toggle='<F12>'
+let g:floaterm_title='($1|$2)'
+
+let g:fzf_layout = {'down': '~40%'}
 
 let g:gitgutter_map_keys=0
 
