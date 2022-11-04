@@ -1,34 +1,28 @@
 " Setup {{{
 
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
+Plug 'jiangmiao/auto-pairs'
+Plug 'SirVer/ultisnips'
+Plug 'bling/vim-bufferline'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'sheerun/vim-polyglot'
+Plug 'lifepillar/vim-solarized8'
+Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'dense-analysis/ale'
+Plug 'justinmk/vim-sneak'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'voldikss/vim-floaterm'
+Plug 'puremourning/vimspector'
+Plug 'mark2185/vim-fubitive'
+call plug#end()
 
-" Plugin manager
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'SirVer/ultisnips'
-Plugin 'bling/vim-bufferline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'lifepillar/vim-solarized8'
-Plugin 'junegunn/fzf.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'dense-analysis/ale'
-Plugin 'justinmk/vim-sneak'
-
-call vundle#end()
-filetype plugin indent on
-
-syntax on
 colorscheme solarized8
 
 " }}} Setup
