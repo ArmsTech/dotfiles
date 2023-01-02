@@ -3,14 +3,13 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-Plug 'jiangmiao/auto-pairs'
+Plug 'cohama/lexima.vim'
 Plug 'SirVer/ultisnips'
 Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/fzf.vim'
@@ -20,7 +19,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'voldikss/vim-floaterm'
 Plug 'puremourning/vimspector'
-Plug 'mark2185/vim-fubitive'
+Plug 'tommcdo/vim-fubitive'
 call plug#end()
 
 colorscheme solarized8
@@ -246,6 +245,8 @@ let g:ultisnips_python_style="sphinx"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:vimspector_install_gadgets = ['debugpy']
 
 " }}} Plugins
 " Auto Commands {{{
