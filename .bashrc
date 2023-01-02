@@ -23,6 +23,7 @@ if [ -z "${DISPLAY}" ]; then
   export DISPLAY=:0
 fi
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/tools
 
 if [ -f ~/.bash_aliases ]; then
@@ -36,11 +37,18 @@ shopt -s no_empty_cmd_completion
 shopt -s histappend
 
 # Load SSH agent and keys
-eval `keychain --eval --agents ssh id_rsa_gh`
+# eval `keychain --eval --agents ssh id_rsa_tq`
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export BAT_THEME="Solarized (dark)"
+export PYTHONBREAKPOINT="pudb.set_trace"
+
+# Register previous command for `pet`
+function adopt() {
+  PREV=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
+  sh -c "pet new `printf %q "$PREV"`"
+}
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
