@@ -50,6 +50,14 @@ function adopt() {
   sh -c "pet new `printf %q "$PREV"`"
 }
 
+# Search pet snippets and output to shell
+function pet-select() {
+  BUFFER=$(pet search --query "$READLINE_LINE")
+  READLINE_LINE=$BUFFER
+  READLINE_POINT=${#BUFFER}
+}
+bind -x '"\C-x\C-r": pet-select'
+
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
