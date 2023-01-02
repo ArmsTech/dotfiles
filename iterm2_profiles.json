@@ -1,7 +1,7 @@
 {
 "Profiles": [
 {
-  "Custom Directory" : "No",
+  "Thin Strokes" : 4,
   "Working Directory" : "\/Users\/brenj",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -18,6 +18,7 @@
     "Green Component" : 0.4823529411764706
   },
   "Use Italic Font" : true,
+  "HotKey Characters" : "",
   "Foreground Color" : {
     "Red Component" : 0.80000000000000004,
     "Color Space" : "sRGB",
@@ -25,6 +26,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.80000000000000004
   },
+  "HotKey Window Floats" : true,
   "Right Option Key Sends" : 0,
   "Show Status Bar" : false,
   "Character Encoding" : 4,
@@ -58,7 +60,9 @@
   "Scrollback With Status Bar" : false,
   "Scrollback Lines" : 50000,
   "Scrollback in Alternate Screen" : false,
+  "HotKey Window Reopens On Activation" : false,
   "Draw Powerline Glyphs" : false,
+  "Hide After Opening" : false,
   "Brighten Bold Text" : false,
   "Flashing Bell" : false,
   "Cursor Guide Color" : {
@@ -75,7 +79,7 @@
     "Blue Component" : 0,
     "Green Component" : 0.53725490196078429
   },
-  "Use Non-ASCII Font" : false,
+  "Icon" : 0,
   "Link Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -83,6 +87,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.35915297269821167
   },
+  "Use Non-ASCII Font" : false,
   "Shortcut" : "",
   "Background Image Location" : "",
   "Bold Color" : {
@@ -94,6 +99,7 @@
   "Use Cursor Guide" : false,
   "Unlimited Scrollback" : false,
   "Custom Command" : "No",
+  "HotKey Key Code" : 0,
   "Keyboard Map" : {
     "0xf700-0x260000" : {
       "Action" : 10,
@@ -289,20 +295,22 @@
   },
   "Window Type" : 0,
   "Allow Title Reporting" : false,
+  "Has Hotkey" : false,
   "Use Bright Bold" : true,
+  "HotKey Modifier Activation" : 3,
   "Cursor Text Color" : {
     "Red Component" : 0.027450980392156862,
     "Color Space" : "sRGB",
     "Blue Component" : 0.25882352941176473,
     "Green Component" : 0.21176470588235294
   },
+  "HotKey Window Dock Click Action" : 0,
   "Default Bookmark" : "No",
   "Cursor Color" : {
-    "Red Component" : 0.90000000000000002,
+    "Red Component" : 0.51372549019607838,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.90000000000000002,
-    "Alpha Component" : 1,
-    "Green Component" : 0.90000000000000002
+    "Blue Component" : 0.58823529411764708,
+    "Green Component" : 0.58039215686274515
   },
   "Ansi 1 Color" : {
     "Red Component" : 0.86274509803921573,
@@ -311,8 +319,8 @@
     "Green Component" : 0.19607843137254902
   },
   "Name" : "brenj",
-  "Blinking Cursor" : true,
   "Guid" : "0BA4EF10-9F7F-4623-B1C1-E165C84E1D9F",
+  "Blinking Cursor" : true,
   "Ansi 8 Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -354,6 +362,7 @@
     "Green Component" : 0.90980392156862744
   },
   "Place Prompt at First Column" : true,
+  "HotKey Window AutoHides" : true,
   "Command" : "",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
@@ -367,6 +376,8 @@
     "Blue Component" : 0.8901960784313725,
     "Green Component" : 0.96470588235294119
   },
+  "HotKey Modifier Flags" : 0,
+  "HotKey Window Animates" : true,
   "Ansi 6 Color" : {
     "Red Component" : 0.16470588235294117,
     "Color Space" : "sRGB",
@@ -374,14 +385,17 @@
     "Green Component" : 0.63137254901960782
   },
   "Transparency" : 0,
+  "HotKey Activated By Modifier" : false,
   "Background Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
     "Blue Component" : 0.21176470588235294,
     "Green Component" : 0.16862745098039217
   },
+  "Initial Text" : "eval `keychain --eval --agents ssh id_rsa_tq`",
   "Screen" : -1,
   "Initial Use Transparency" : false,
+  "HotKey Characters Ignoring Modifiers" : "",
   "Non Ascii Font" : "Monaco 12",
   "Ansi 13 Color" : {
     "Red Component" : 0.42352941176470588,
@@ -391,15 +405,18 @@
   },
   "Columns" : 80,
   "Show Timestamps" : 0,
+  "HotKey Alternate Shortcuts" : [
+
+  ],
   "Visual Bell" : true,
   "ASCII Ligatures" : false,
-  "Thin Strokes" : 4,
   "Ansi 5 Color" : {
     "Red Component" : 0.82745098039215681,
     "Color Space" : "sRGB",
     "Blue Component" : 0.50980392156862742,
     "Green Component" : 0.21176470588235294
-  }
+  },
+  "Custom Directory" : "No"
 }
 ]
 }
