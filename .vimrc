@@ -229,14 +229,21 @@ let g:floaterm_keymap_next='<F9>'
 let g:floaterm_keymap_toggle='<F12>'
 let g:floaterm_title='($1|$2)'
 
-let g:fzf_layout = {'down': '~40%'}
+let g:fzf_layout = {'down': '~25%'}
+let g:fzf_preview_window = ['right:hidden', 'ctrl-/']
+let $FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 
 let g:gitgutter_map_keys=0
+
+let g:lexima_enable_newline_rules=0
+let g:lexima_enable_endwise_rules=0
 
 let g:lightline = {'colorscheme': 'solarized'}
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+let $RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
 
 let g:sneak#s_next=1
 let g:sneak#label=1
