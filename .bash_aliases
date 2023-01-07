@@ -2,10 +2,8 @@
 # vi: set filetype=sh :
 
 alias ..='cd ..'
-alias g='gvim'
 alias h='history'
 alias l='ls -lhA'
-alias v='vim'
 
 alias ga='git add'
 alias gb='git branch'
