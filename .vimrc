@@ -210,6 +210,7 @@ let g:ale_linters = {
     \ 'python': ['flake8'], 'yaml': ['yamllint']
     \ }
 let g:ale_linters_explicit=1
+let g:ale_virtualtext_cursor=0
 
 let g:bufferline_echo=0
 
