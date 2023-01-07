@@ -10,7 +10,7 @@ GREEN="\[\e[01;32m\]"
 RED="\[\e[01;31m\]"
 WHITE="\[\e[0m\]"
 
-PS1=" \$? [ ${GREEN}\u${WHITE}@${GREEN}\h${WHITE} ] ${CYAN}\w${RED}\$(get_git_branch)${WHITE}\n🥶 \$> "
+PS1="\$?\[ ${GREEN}\u${WHITE}@${GREEN}\h${WHITE} \]${CYAN}\w${RED}\$(get_git_branch)${WHITE}\n\$> "
 
 EDITOR="vim"
 VISUAL="$EDITOR"
