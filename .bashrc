@@ -14,6 +14,7 @@ PS1="\$?\[ ${GREEN}\u${WHITE}@${GREEN}\h${WHITE} \]${CYAN}\w${RED}\$(get_git_bra
 
 EDITOR="vim"
 VISUAL="$EDITOR"
+HISTCONTROL=ignoreboth
 
 get_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ ( \1 )/'
