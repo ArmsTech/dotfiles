@@ -20,10 +20,6 @@ get_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ ( \1 )/'
 }
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
 if [ -z "${DISPLAY}" ]; then
   export DISPLAY=:0
 fi
@@ -44,6 +40,7 @@ shopt -s histappend
 # Load SSH agent and keys
 # eval `keychain --eval --agents ssh id_rsa_tq`
 
+[ -f /usr/local/etc/bash_completion  ] && . /usr/local/etc/bash_completion
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export BAT_THEME="Solarized (dark)"
