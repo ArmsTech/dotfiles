@@ -84,37 +84,32 @@ hi Sneak guifg=white guibg=red
 
 let mapleader=","
 
+" Global
+nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>e :e <c-r>=expand('%:p:h') . '/'<cr>
 inoremap <leader>i <esc>
 nnoremap <leader>q :q!<cr>
-nnoremap <leader>r :so %<cr>
+nnoremap <leader>r :Rg <cr>
 nnoremap <leader>s :w<cr>
 nnoremap <leader>v :edit $MYVIMRC<cr>
 nnoremap <leader>x <c-w>x
 nnoremap <leader>y "*y"
 nnoremap <leader>z :wq!<cr>
-
-nnoremap <leader>G :gui<cr>
-nnoremap <leader>Y :<C-u>CocList -A --normal yank<cr>
-
-" Remove white space
-nnoremap <leader>rw mz:%s/\s\+$//<cr>:let @/=''<cr>`z
-
-" Remove search highlights
 nnoremap <leader><space> :nohlsearch<cr>
 
 " Coc
-nmap <leader>cd <Plug>(coc-definition)
-nmap <leader>cr <Plug>(coc-references)
+nnoremap <leader>cd <Plug>(coc-definition)
+nnoremap <leader>cr <Plug>(coc-references)
+nnoremap <leader>cy :<C-u>CocList -A --normal yank<cr>
 
-nmap <leader>db <Plug>VimspectorBreakpoints
-nmap <leader>dl <Plug>VimspectorLaunch
-nmap <leader>dr <Plug>VimspectorReset
-nmap <leader>dt <Plug>VimspectorToggleBreakpoint
+" Vimspector
+nnoremap <leader>db <Plug>VimspectorBreakpoints
+nnoremap <leader>dl <Plug>VimspectorLaunch
+nnoremap <leader>dr <Plug>VimspectorReset
+nnoremap <leader>dt <Plug>VimspectorToggleBreakpoint
 
 " FZF
-nnoremap <leader>b :Buffers<cr>
-nnoremap <leader>f :Files<cr>
+nnoremap <leader>fs :Files<cr>
 nnoremap <leader>fl :Lines<cr>
 nnoremap <leader>fc :Commits<cr>
 nnoremap <leader>fb :BLines<cr>
@@ -129,9 +124,9 @@ nnoremap <leader>gd :G diff<cr>
 nnoremap <leader>gg :Ggrep
 nnoremap <leader>go :Gread<cr>
 nnoremap <leader>gs :G status<cr>
-nnoremap <leader>gw :Gbrowse<cr>
+nnoremap <leader>gw :GBrowse<cr>
+vnoremap <leader>gw :GBrowse<cr>
 nnoremap <leader>gx :Gdelete<cr>
-map <leader>bb :GBrowse<cr>
 
 " GitGutter
 nnoremap <leader>h? :map <leader>h<cr>
@@ -141,11 +136,7 @@ nnoremap <leader>hp :GitGutterPrevHunk<cr>
 nnoremap <leader>hu :GitGutterUndoHunk<cr>
 
 " Floaterm
-nmap <leader>py :FloatermNew ipython<cr>
-
-" Sneak
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
+nnoremap <leader>py :FloatermNew ipython<cr>
 
 " Vim window splits
 nnoremap <leader><bar> <c-w>v
@@ -186,6 +177,10 @@ noremap h s
 noremap N ^
 noremap E g_
 
+" Sneak
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
+
 " toggle folding with space
 " http://vim.wikia.com/wiki/Folding
 nnoremap <silent> <space> @=(foldlevel('.')?'za':"\<space>")<cr>
@@ -203,6 +198,7 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " }}} Remap Keys
 " Plugins {{{
 
+" Ale
 let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save=1
 let g:ale_linters = {
@@ -212,8 +208,10 @@ let g:ale_linters = {
 let g:ale_linters_explicit=1
 let g:ale_virtualtext_cursor=0
 
+" Bufferline
 let g:bufferline_echo=0
 
+" Coc
 let g:coc_global_extensions = [
     \ 'coc-docker',
     \ 'coc-json',
@@ -223,37 +221,47 @@ let g:coc_global_extensions = [
     \ 'coc-yank',
     \ ]
 
+" Floaterm
 let g:floaterm_keymap_new='<F7>'
 let g:floaterm_keymap_prev='<F8>'
 let g:floaterm_keymap_next='<F9>'
 let g:floaterm_keymap_toggle='<F12>'
 let g:floaterm_title='($1|$2)'
 
+" FZF
 let g:fzf_layout = {'down': '~25%'}
 let g:fzf_preview_window = ['right:hidden', 'ctrl-/']
 let $FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 
+" Fugitive
 let g:gitgutter_map_keys=0
 
+" Lexima
 let g:lexima_enable_newline_rules=0
 let g:lexima_enable_endwise_rules=0
 
+" Lightline
 let g:lightline = {'colorscheme': 'solarized'}
 
+" Solarized
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+" Ripgrep
 let $RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
 
+" Sneak
 let g:sneak#s_next=1
 let g:sneak#label=1
 
+" UltiSnips
 let g:UltiSnipsSnippetDirectories=["ultisnips-snippets"]
 let g:ultisnips_python_style="sphinx"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" Vimspector
 let g:vimspector_install_gadgets = ['debugpy']
 
 " }}} Plugins
