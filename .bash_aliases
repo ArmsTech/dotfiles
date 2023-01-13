@@ -7,6 +7,7 @@ alias l='ls -lhA'
 
 # 2 character
 alias ..='cd ..'
+alias cl='clear'
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
