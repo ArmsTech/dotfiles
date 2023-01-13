@@ -1,0 +1,109 @@
+[[snippets]]
+  description = "Build operations-server-python3.5"
+  command = "docker build -t operations-server-python3.5 . -f python3.5/Dockerfile"
+  output = ""
+
+[[snippets]]
+  description = "Kill all docker containers"
+  command = "docker kill $(docker ps -q)"
+  output = ""
+
+[[snippets]]
+  description = "Remove all stopped docker containers"
+  command = "docker container prune"
+  output = ""
+
+[[snippets]]
+  description = "Remove all dangling docker images"
+  command = "docker image prune"
+  output = ""
+
+[[snippets]]
+  description = "List all running docker containers"
+  command = "docker ps -a"
+  output = ""
+
+[[snippets]]
+  description = "Build and compose docker containers"
+  command = "docker compose up --build"
+  output = ""
+
+[[snippets]]
+  description = "Run operations manager without container"
+  command = "RABBITMQ_USER=guest RABBITMQ_PASS=guest python main.py"
+  output = ""
+
+[[snippets]]
+  description = "Install wheel file with rq-plugin"
+  command = "rq-plugin install <wheel>"
+  output = ""
+
+[[snippets]]
+  description = "Generate docs"
+  command = "poetry run make clean singlehtml"
+  output = ""
+
+[[snippets]]
+  description = "Skip pre-commit hooks; no verify"
+  command = "git commit --no-verify"
+  output = ""
+
+[[snippets]]
+  description = "Modify rpm spec file and rebuild"
+  command = "rpmrebuild -e -p <path-to-package>"
+  output = ""
+
+[[snippets]]
+  description = "Build an rpm from a spec file"
+  command = "rpmbuild -bb <path-to-spec-file>"
+  output = ""
+
+[[snippets]]
+  description = "Show and follow dynamo logs"
+  command = "journalctl -o cat -fu threatq-dynamo"
+  output = ""
+
+[[snippets]]
+  description = "Delete all local merged branches"
+  command = "git branch |grep -vE 'master|development|\\*' |xargs git branch -d"
+  output = ""
+
+[[snippets]]
+  description = "Push local changes to git"
+  command = "git push origin "
+  output = ""
+
+[[snippets]]
+  description = "Activate threatq-pynoceros"
+  command = ". /Users/brenj/Library/Caches/pypoetry/virtualenvs/threatq-pynoceros-R8CcHd_w-py3.5/bin/activate"
+  output = ""
+
+[[snippets]]
+  description = "Monitor laravel logs; api logs; tail"
+  command = "tail -100 -f ~/Workspace/api/storage/logs/laravel.log |bat --paging=never -l log"
+  output = ""
+
+[[snippets]]
+  description = "View code changes with syntax highlighting; git diff; gd"
+  command = "git diff --name-only --relative --diff-filter=d | xargs bat --diff"
+  output = ""
+
+[[snippets]]
+  description = "Build container, run, and remove on exit; docker"
+  command = "docker run --rm -it --network=host $(docker build -q .)"
+  output = ""
+
+[[snippets]]
+  description = "Build and run docker container"
+  command = "docker build -t <tag> . && docker run -it <tag>"
+  output = ""
+
+[[snippets]]
+  description = "Pull latest from git"
+  command = "git pull origin"
+  output = ""
+
+[[snippets]]
+  description = "Build threatq wheel file; pynoceros"
+  command = "poetry build --format wheel"
+  output = ""
